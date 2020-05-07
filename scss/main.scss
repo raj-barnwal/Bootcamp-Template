@@ -1,6 +1,33 @@
 @import 'utilities';
 @import 'slider';
 
+
+@keyframes top-to-bottom-slide {
+    from{
+        top: -2rem;
+    }
+    to{
+        top: 0;
+    }
+}
+@keyframes left-to-right-slide {
+    from{
+        @include transform(translateX(-100%));
+    }
+    to{
+       @include transform(translateX(1%));
+    }
+}
+@keyframes right-to-left-slide {
+    0%{
+        @include transform(translateX(200%));
+    }
+    100%{
+        @include transform(translateX(0));
+    }
+}
+
+
 .main-btn{
     margin: 1rem 0;
     color: var(--white-color);
@@ -85,6 +112,8 @@
         width: 60%;
         margin: 0 auto;
         text-align: center;
+        position: relative;
+        animation: 2s left-to-right-slide forwards ease-in-out;
     }
     &-heading{
         color: var(--dark-color);
@@ -123,6 +152,8 @@ header{
             padding: .5rem 1rem;
             @extend %flex-property;
             align-items: center;
+            position: relative;
+            animation: 2s top-to-bottom-slide forwards ease-in-out;
         }
         &-logo{
             .logo-img{
@@ -132,6 +163,7 @@ header{
         }
         &-right-content{
             @extend %flex-property;
+            
             li{
                 margin-right: 5rem;
                 .header-text{
@@ -183,8 +215,8 @@ nav{
         @extend %flex-property;
         justify-content: flex-end;
         li{
-            // margin-right: -10rem;
             padding: .8rem;
+            @extend %transition-shared;
             a{
                 margin-right: 0;
                 color: var(--white-color);
@@ -194,12 +226,13 @@ nav{
                 @extend %transition-shared;
                 &:hover{
                     color: var(--dark-color);
-                    // transform: translateX(50px);
-                    // @include transform(translateX(2rem));
                 }
             }
             &:last-child{
                 margin-right: 0;
+            }
+            &:hover{
+                transform: translateX(20px);
             }
         }
     }
@@ -210,17 +243,15 @@ nav{
         padding: 2rem 0 4rem 0;
         .about-flex{
             @extend %flex-property;
-            // display: flex;
-            // justify-content: space-between;
-            // background-color: red;
             .what-we-do{
                 width: 40%;
                 padding-right: 2rem;
+                position: relative;
+                animation: 2s left-to-right-slide forwards ease-in-out;
                 .do-heading{
                     font-size: 2rem;
                     color: var(--dark-color);
                     padding: 1rem 0;
-                    // text-transform: uppercase;
                 }
                 .do-desc{
                     color: var(--medium-color);
@@ -230,6 +261,12 @@ nav{
                     display: inline-block;
                     background-color: var(--main-color);
                     color: var(--white-color);
+                    cursor: pointer;
+                    @extend %transition-shared;
+                    &:hover{
+                        background-color: var(--dark-color);
+                        color: var(--white-color);
+                    }
                 }
             }
             .about-items{
@@ -237,7 +274,11 @@ nav{
                 @extend %flex-property;
                 align-items: center;
                 flex-wrap: wrap;
+                position: relative;
+                @extend %transition-shared;
+                animation: 2s right-to-left-slide forwards ease-in-out;
                 .about-item{
+                    padding: 1rem;
                     margin-bottom: 1rem;
                     flex-basis: calc(100%/2 - 2rem);
                     &-icon{
@@ -253,6 +294,9 @@ nav{
                         color: var(--medium-color);
                         font-size: .86rem;
                     }
+                    &:hover{
+                        box-shadow: 2px 3px 8px var(--medium-color);
+                    }
                 }
             }
         }
@@ -262,6 +306,7 @@ nav{
     &-skills{
         padding: 2rem 0;
         .skills{
+            // background-color: red;
             &-heading{
                 text-align: center;
                 color: var(--dark-color);
@@ -274,6 +319,16 @@ nav{
                     flex-basis: calc(100%/2 - 1rem);
                     &-accordian{
                         margin: 2rem 0 0 1rem;
+                    }
+                    &-accordions{
+                        @extend %transition-shared;
+                        position: relative;
+                        animation: 2s left-to-right-slide forwards ease-in-out;
+                    }
+                    &-progress{
+                        @extend %transition-shared;
+                        position: relative;
+                        animation: 2s right-to-left-slide forwards ease-in-out;
                     }
                 }
             }
@@ -313,7 +368,7 @@ nav{
             text-align: center;
             padding: 5rem 1.5rem;
             position: relative;
-
+            @extend %transition-shared;
             &:nth-child(odd){
                 background-color: var(--lighter-color);
             }
@@ -330,6 +385,7 @@ nav{
                 font-size: 1.5rem;
                 padding: .8rem;
                 color: var(--main-color);
+                @extend %transition-shared;
             }
             .hand-icon{
                 padding: 0.99rem .8rem;
@@ -343,6 +399,16 @@ nav{
             &-count{
                 font-size: 2.5rem;
                 color: var(--main-color);
+            }
+            &:hover{
+                box-shadow: 2px 3px 8px var(--medium-color);
+                .activity-card-icon{
+                    &:hover{
+                        background-color: var(--main-color);
+                        color: var(--white-color);
+                        @include transform(rotate(360deg));
+                    }
+                }
             }
         }
     }
@@ -371,6 +437,7 @@ nav{
                     color: var(--main-color);
                     padding: 1rem;
                     text-align: center;
+                    @extend %transition-shared;
                 }
                 .bulb-icon{
                     padding: 1rem 1.3rem;
@@ -390,12 +457,15 @@ nav{
                 &:hover{
                     background-color: var(--main-color);
                     border: 1px solid var(--main-color);
+                    box-shadow: 3px 3px 10px 5px var(--medium-color);
+                    @include transform(scale(1.05));
                     color: white;
                     .service-card{
                         &-icon{
                             color: var(--white-color);
                             border:1px solid var(--white-color);
                             background-color: var(--main-color);
+                            @include transform(rotate(360deg));
                         }
                         &-heading{
                             color: var(--white-color);
@@ -416,12 +486,15 @@ nav{
     //sectionn work
     &-work{
         .work-nav{
+            width: 60%;
             @extend %flex-property;
-            // display: flex;
             justify-content: center;
-            margin: 1rem 0;
+            margin: 1rem auto;
+            position: relative;
+            animation: 2s top-to-bottom-slide forwards ease-in-out;
             li{
                 margin-right: 2rem;
+                @extend %transition-shared;
                 a{
                     color: var(--dark-color);
                     font-size: .88rem;
@@ -433,6 +506,9 @@ nav{
                 }
                 &:last-child{
                     margin-right: 0;
+                }
+                &:hover{
+                    transform: translateY(-20px);
                 }
             }
         }
@@ -446,21 +522,43 @@ nav{
                 margin-bottom: 2rem;
                 flex-basis: calc(100%/3 - 1rem);
                 cursor: pointer;
+                @extend %transition-shared;
                 img{
                     width: 100%;
                     height: 100%;
                 }
+                .overlay {
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    background-color: rgba(103, 65, 148,0.6);
+                    overflow: hidden;
+                    width: 100%;
+                    height: 100%;
+                    -webkit-transform: scale(0);
+                    -ms-transform: scale(0);
+                    transform: scale(0);
+                    -webkit-transition: .3s ease;
+                    transition: .3s ease;
+                }
                 .work-caption{
+                    color: white;
+                    font-size: 20px;
                     position: absolute;
                     top: 50%;
                     left: 50%;
-                    z-index: 1;
-                    text-align: center;
+                    -webkit-transform: translate(-50%, -50%);
+                    -ms-transform: translate(-50%, -50%);
                     transform: translate(-50%, -50%);
-                    color: var(--white-color);
+                    text-align: center;
                 }
                 &:hover{
-
+                    .overlay{
+                        -webkit-transform: scale(1);
+                        -ms-transform: scale(1);
+                        transform: scale(1);
+                    }
                 }
             }
         }
@@ -473,6 +571,8 @@ nav{
             @extend %flex-property;
             align-items: center;
             .team-card{
+                position: relative;
+                @extend %transition-shared;
                 flex-basis: calc(100%/4 - 1rem);
                 img{
                     width: 100%;
@@ -488,6 +588,9 @@ nav{
                         font-size: .79rem;
                         color: var(--medium-color);
                     }
+                }
+                &:hover{
+                    box-shadow: 3px 3px 8px 5px var(--medium-color);
                 }
             }
         }
@@ -506,6 +609,7 @@ nav{
                 border: 1px solid var(--medium-color);
                 padding: 2rem;
                 cursor: pointer;
+                 position: relative;
                 @extend %transition-shared;
                 &-heading{
                     color: var(--dark-color);
@@ -525,6 +629,8 @@ nav{
                 }
                 &:hover{
                     background-color: var(--main-color);
+                    box-shadow: 3px 3px 8px 5px var(--medium-color);
+                    @include transform(scale(1.06));
                     .pricing-card{
                         &-heading{
                             color: var(--white-color);
@@ -555,12 +661,13 @@ nav{
             align-items: center;
             .news-card{
                 flex-basis: calc(100%/3 - 1rem);
+                @extend %transition-shared;
                 img{
                     width: 100%;
                     height: 250px;
                 }
                 &-caption{
-                    padding: 1rem 0;
+                    padding: 1rem;
                 }
                 &-heading{
                     background-color:var (--dark-color);
@@ -595,6 +702,9 @@ nav{
                     display: inline-block;
                     margin: 1rem 0;
                 }
+                &:hover{
+                    box-shadow: 3px 3px 8px 5px var(--medium-color);
+                }
             }
         }
     }
@@ -602,11 +712,12 @@ nav{
     //section logo
     &-logos{
         padding: 2rem 0;
-        // background-color: red;
         .logos-items{
             @extend %flex-property;
             align-items: center;
             .logo-item{
+                position: relative;
+                @extend %transition-shared;
                 flex-basis: calc(100%/5 - 1rem);
                 height: 120px;
                 margin: auto;
@@ -618,6 +729,10 @@ nav{
                     margin: auto;
                     width: 90%;
                     height: 80%;
+                }
+                &:hover{
+                    box-shadow: 2px 2px 5px 5px var(--medium-color);
+                    @include transform(translateY(-20px));
                 }
             }
         }
@@ -635,7 +750,6 @@ nav{
             align-items: center;
             .signup{
                 text-align: center;
-                // align-self: center;
                 flex-basis: calc(100%/2);
                 &-text{
                     text-align: left;
@@ -686,12 +800,10 @@ nav{
                 &-1-form{
                     @extend %flex-property;
                     margin: 1rem 0;
-                    // background-color: red;
                     input[type=text], input[type=email]{
                         flex-basis: calc(100%/3 - 1rem);
                         height: 40px;
                         padding-left: 3px;
-                        // border-radius: 5px;
                     }
                 }
                 &-2-form{
@@ -713,13 +825,11 @@ nav{
     //section map
     &-map{
         position: relative;
-        // max-height: 430px;
        .contact-detail{
            position: absolute;
            padding: 1.5rem 0;
            z-index: 1;
            min-height: 430px;
-        //    margin-bottom: 0;
            top: 0;
             right: 5%;
            background-color: var(--main-color);
@@ -756,7 +866,6 @@ nav{
        } 
        .get-it{
            margin-top: -5px;
-        //    margin-bottom: 2rem;
            background-color: var(--main-color);
            padding: 2rem;
             .get-it{
