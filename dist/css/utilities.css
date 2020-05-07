@@ -1,0 +1,201 @@
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  overflow: hidden; }
+
+.container-fluid {
+  max-width: 1380px;
+  margin: auto;
+  overflow: hidden; }
+
+.color-main {
+  color: var(--color-main); }
+
+.color-light {
+  color: var(--color-light); }
+
+.color-dark {
+  color: var(--color-dark); }
+
+.color-medium {
+  color: var(--color-medium); }
+
+.lead {
+  margin: 1rem auto;
+  font-size: 1.1rem; }
+
+.divider {
+  position: relative;
+  border-radius: 50%;
+  margin: 1rem auto;
+  display: flex;
+  align-items: center;
+  height: 5px;
+  width: 5px;
+  background-color: var(--color-main); }
+  .divider:before {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 100px;
+    background: var(--color-main);
+    margin-right: 0.5rem;
+    left: -110px; }
+  .divider:after {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 100px;
+    background: var(--color-main);
+    margin-left: 0.5rem;
+    right: -110px; }
+
+.flex {
+  display: flex;
+  flex-wrap: wrap; }
+
+.btn {
+  padding: 1rem;
+  cursor: pointer;
+  color: var(--color-light); }
+  .btn-main {
+    border: 2px solid var(--color-main);
+    background-color: var(--color-main); }
+  .btn-dark {
+    border: 2px solid var(--color-dark);
+    background-color: var(--color-dark);
+    color: var(--color-light); }
+  .btn-light {
+    border: 2px solid var(--color-light);
+    background-color: var(--color-light);
+    color: var(--color-main); }
+  .btn-trans {
+    border: 2px solid var(--color-light);
+    background: transparent; }
+
+.text-1 {
+  font-size: 1rem; }
+
+.text-2 {
+  font-size: 2rem; }
+
+.text-3 {
+  font-size: 3rem; }
+
+.text-4 {
+  font-size: 4rem; }
+
+.text-center {
+  text-align: center; }
+
+.text-left {
+  text-align: left; }
+
+.text-bold {
+  font-weight: 900; }
+
+.my-1 {
+  margin-top: 1rem;
+  margin-bottom: 1rem; }
+
+.my-2 {
+  margin-top: 2rem;
+  margin-bottom: 2rem; }
+
+.my-3 {
+  margin-top: 3rem;
+  margin-bottom: 3rem; }
+
+.my-4 {
+  margin-top: 4rem;
+  margin-bottom: 4rem; }
+
+.py-1 {
+  padding-top: 1rem;
+  padding-bottom: 1rem; }
+
+.py-2 {
+  padding-top: 2rem;
+  padding-bottom: 2rem; }
+
+.py-3 {
+  padding-top: 3rem;
+  padding-bottom: 3rem; }
+
+.py-4 {
+  padding-top: 4rem;
+  padding-bottom: 4rem; }
+
+.width-50 {
+  width: 50%; }
+
+.width-60 {
+  width: 60%; }
+
+.width-75 {
+  width: 75%; }
+
+.width-90 {
+  width: 90%; }
+
+.width-100 {
+  width: 100%; }
+
+.fade {
+  animation: fade 1.5s; }
+
+@keyframes fade {
+  from {
+    opacity: .4; }
+  to {
+    opacity: 1; } }
+
+.translateY {
+  animation: translateY 1.5s ease-in-out forwards; }
+
+@keyframes translateY {
+  from {
+    transform: translateY(-100rem); }
+  to {
+    transform: none; } }
+
+.translateYdown {
+  animation: translateYdown 1.5s ease-in-out forwards; }
+
+@keyframes translateYdown {
+  from {
+    transform: translateY(100rem); }
+  to {
+    transform: none; } }
+
+.translateX {
+  animation: translateX 1.5s ease-in-out forwards; }
+
+@keyframes translateX {
+  from {
+    transform: translateX(-120rem); }
+  to {
+    transform: none; } }
+
+.translateXright {
+  animation: translateXright 1.5s ease-in-out forwards; }
+
+@keyframes translateXright {
+  from {
+    transform: translateX(120rem); }
+  to {
+    transform: none; } }
+
+@keyframes backgroundfill {
+  from {
+    width: 0%; }
+  to {
+    width: 75%; } }
+
+@keyframes zoomin {
+  from {
+    transform: scale(1); }
+  to {
+    transform: scale(1.2); } }

@@ -1,0 +1,109 @@
+@media (max-width: 575.98px) {
+  .text-3 {
+    font-size: 2rem; }
+  #slides .container-fluid .slide .btn-main {
+    margin-right: 0.5rem;
+    margin-bottom: 1rem; }
+  #testimonials .my-2 {
+    margin: 0.8rem 0; }
+  .container {
+    padding-left: 1.8rem;
+    padding-right: 1.8rem; }
+  #header li {
+    margin-bottom: 0.8rem; }
+  #stats .container-fluid .card {
+    flex: 100%; }
+  #work .container .cards .card {
+    flex: 100%; }
+  #about .what-we-do {
+    flex: 100%;
+    margin-bottom: 4rem;
+    text-align: center; }
+  #about .stacks {
+    flex: 100%; }
+    #about .stacks .card {
+      flex: 100%;
+      text-align: center; }
+  #service .flex .card {
+    flex: 100%; }
+  #team .cards .card {
+    flex: 100%; }
+  #pricing .cards .card {
+    flex: 100%;
+    margin-bottom: 2rem; }
+  #news .cards .card {
+    flex: 100%;
+    margin-bottom: 2rem; }
+  #news .partners .card {
+    flex: 100%;
+    margin-bottom: 2rem; }
+  #footer {
+    text-align: center; }
+    #footer #brand .container {
+      justify-content: center; }
+      #footer #brand .container P {
+        margin-bottom: 1rem; }
+    #footer .container .copyright {
+      text-align: center;
+      justify-content: center; }
+  #newsletter .card {
+    flex: 100%; }
+  #map .container .card {
+    width: 100%; }
+    #map .container .card li {
+      margin-left: 5rem; }
+      #map .container .card li p {
+        padding: 0.4rem 0; }
+    #map .container .card .text:before {
+      height: 15px;
+      width: 15px;
+      font-size: 1rem;
+      padding: 12px; }
+  #get-in-touch .form .flex input {
+    flex: 100%;
+    margin-bottom: 2rem; }
+  #get-in-touch .form textarea {
+    margin-bottom: 2rem; } }
+
+@media (max-width: 767.98px) {
+  #header #brand {
+    flex-direction: column;
+    padding: 1rem 0; }
+    #header #brand h2 {
+      margin-bottom: 1rem; }
+  #header #links ul {
+    justify-content: center; }
+  #skills .collapsibles {
+    flex: 100%;
+    margin-bottom: 4rem; }
+  #skills .progress {
+    flex: 100%; }
+  #work .container .cards .card {
+    flex: 0 1 calc((100% / 2) - 1rem); } }
+
+@media (min-width: 576px) and (max-width: 991.98px) {
+  #about .what-we-do {
+    flex: 100%;
+    margin-bottom: 4rem;
+    text-align: center; }
+  #about .stacks {
+    flex: 100%; }
+  #stats .container-fluid .card {
+    flex: 0 1 calc((100% / 2)); }
+    #stats .container-fluid .card:nth-child(3) {
+      background-color: #dbdbdb; }
+    #stats .container-fluid .card:nth-child(4) {
+      background-color: #fafafa; }
+  #service .flex .card {
+    flex: 0 1 calc((100% / 2) - 1rem); }
+  #team .cards .card {
+    flex: 0 1 calc((100% / 2) - 1rem); }
+  #pricing .cards .card {
+    flex: 0 1 calc((100% / 2) - 1rem);
+    margin-bottom: 2rem; }
+  #news .cards .card {
+    flex: 0 1 calc((100% / 2) - 1rem);
+    margin-bottom: 2rem; }
+  #news .partners .card {
+    flex: 0 1 calc((100% / 2) - 1rem);
+    margin-bottom: 2rem; } }
