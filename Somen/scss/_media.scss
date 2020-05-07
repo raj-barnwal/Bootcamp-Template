@@ -1,0 +1,188 @@
+@media (max-width: 1023px) {
+  body {
+    font-size: 75%;
+
+    .img-cards {
+      display: block;
+
+      .item {
+        width: 80%;
+        margin: auto;
+      }
+    }
+
+    .price {
+      .p-cards {
+        .card {
+          ul {
+            li {
+              &:nth-child(2) {
+                font-size: 1.2rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  body {
+    font-size: 50%;
+
+    .container {
+      overflow-x: hidden;
+    }
+
+    .head-wrapper {
+      padding: 0;
+    }
+
+    .menu {
+      ul {
+        padding: 1rem 0;
+        display: block;
+        text-align: center;
+
+        li {
+          padding: 1rem;
+        }
+      }
+    }
+
+    .content-area {
+      display: block;
+
+      .box-wrapper {
+        padding: 0;
+
+        .box {
+          i {
+            margin-top: 0;
+          }
+        }
+      }
+    }
+
+    .skills {
+      .skill-wrapper {
+        display: block;
+
+        .acc,
+        .progress {
+          margin: auto;
+        }
+
+        .progress {
+          padding-left: 0;
+        }
+      }
+    }
+
+    .services {
+      .boxes {
+        display: block;
+
+        .box {
+          width: 90%;
+          height: max-content;
+          margin: 0;
+        }
+      }
+    }
+
+    .work {
+      ul {
+        padding: 0;
+      }
+
+      .image-box {
+        display: block;
+
+        .image {
+          width: 80%;
+        }
+      }
+    }
+
+    .members {
+      .member-images {
+        padding: 0;
+      }
+    }
+
+    .price {
+      .p-cards {
+        display: block;
+
+        .card {
+          width: 80%;
+        }
+      }
+    }
+
+    .news-box {
+      display: block;
+
+      .n-box {
+        width: 80%;
+        text-align: center;
+
+        p {
+          margin: auto;
+        }
+      }
+    }
+
+    .logos {
+      display: block;
+      text-align: center;
+
+      img {
+        width: 80%;
+      }
+    }
+
+    .get-in-touch {
+      text-align: center;
+
+      input {
+        width: 80%;
+      }
+
+      textarea {
+        width: 80%;
+      }
+    }
+
+    .map {
+      // height: max-content;
+
+      .list {
+        width: 50%;
+        left: 80px;
+
+        .tags {
+          i {
+            border: none;
+            padding: 0;
+            margin-left: 10px;
+          }
+        }
+      }
+    }
+
+    .promotion {
+      padding: 1rem;
+    }
+
+    .section-container {
+      max-width: 100%;
+    }
+
+    .heading::before {
+      display: none;
+    }
+  }
+}
