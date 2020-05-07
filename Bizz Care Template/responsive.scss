@@ -1,0 +1,108 @@
+@media (max-width: 600px) {
+  .container {
+    max-width: 400px;
+  }
+  .header-content {
+    flex-direction: column;
+    align-items: center;
+  }
+  nav {
+    ul {
+      flex-direction: column;
+    }
+  }
+  .what-we-do {
+    align-items: center;
+    justify-content: center;
+    & > div {
+      width: 100%;
+    }
+  }
+  .projects {
+    flex-direction: column;
+    .project {
+      width: 100%;
+    }
+  }
+  .service-boxes {
+    flex-direction: column;
+    .service-box {
+      width: 100%;
+    }
+  }
+  .works {
+    ul {
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  .video {
+    h1 {
+      display: none;
+    }
+  }
+  .pricing-boxes {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .pricing-box {
+      width: 100%;
+      //   margin: 0 auto;
+      margin: 0 0 0.5rem 0;
+    }
+  }
+  .news-boxes {
+    flex-direction: column;
+    .news-box {
+      width: 100%;
+    }
+  }
+  .logos {
+    flex-direction: column;
+    .logo {
+      width: 100%;
+    }
+  }
+  .maps {
+    .map {
+      display: none;
+    }
+  }
+  .sub-footer {
+    &-content {
+      flex-direction: column;
+    }
+  }
+}
+
+@media (min-width: 601px) and (max-width: 1000px) {
+  .container {
+    max-width: 700px;
+  }
+  .what-we-do {
+    align-items: center;
+    justify-content: center;
+    & > div {
+      min-height: 200px;
+    }
+  }
+  .projects {
+    .project {
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 200px;
+    }
+  }
+  .service-boxes {
+    .service-box {
+      min-height: 250px;
+      justify-content: center;
+    }
+  }
+  .maps {
+    .map {
+      display: none;
+    }
+  }
+}
