@@ -1,0 +1,17 @@
+@media (max-width: 1024px) {
+  .container {
+    width: 100%;
+  }
+
+  .section {
+    &-e {
+      .container {
+        .works-image {
+          img {
+            width: 28%;
+          }
+        }
+      }
+    }
+  }
+}
