@@ -33,8 +33,13 @@
         </div>
     </header>
     <nav>
+        <div class="div-hamburgur">
+            <a href="javascript:void(0);" class="icon hamburgur" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
         <div class="container main-nav">
-            <ul class="navbar nav-right">
+            <ul class="navbar nav-right" id="myLinks">
                 <li><a href="#home" class="current">home</a></li>
                 <li><a href="#about" >about</a></li>
                 <li><a href="#service" >service</a></li>
@@ -48,18 +53,63 @@
     </nav>
     <!--section slider-->
     <div class="section-slider">
-        <!-- <div class="slider">
-            <div class="slide"><p>Slide1</p></div>
-            <div class="slide"><p>Slide2</p></div>
-            <div class="slide"><p>Slide3</p></div>
-        </div> -->
-        <div id="slider">
+     <div id="slider">
             <figure>
-                <img src="image/slider/slide1.jpg">
-                <img src="image/slider/slide2.jpg">
-                <img src="image/slider/slide1.jpg">
-                <img src="image/slider/slide3.jpg">
-                <img src="image/slider/slide1.jpg">
+                <div class="img-item">
+                    <img src="image/slider/slide1.jpg">
+                    <div class="slider-caption">
+                        <h2 class="slider-caption-heading text-upper">we provide best services</h2>
+                        <p class="slider-caption-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                            Aliquid repellat, possimus vel, facere iusto 
+                        </p>
+                        <a class="btn main-btn text-upper">purchase now</a>
+                        <a class="btn main-btn text-upper">learn more</a>
+                    </div>
+                </div>
+                <div class="img-item">
+                    <img src="image/slider/slide2.jpg">
+                    <div class="slider-caption">
+                        <h2 class="slider-caption-heading text-upper">we provide best services</h2>
+                        <p class="slider-caption-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                            Aliquid repellat, possimus vel, facere iusto 
+                        </p>
+                        <a class="btn main-btn text-upper">purchase now</a>
+                        <a class="btn main-btn text-upper">learn more</a>
+                    </div>
+                </div>
+                <div class="img-item">
+                    <img src="image/slider/slide1.jpg">
+                    <div class="slider-caption">
+                        <h2 class="slider-caption-heading text-upper">we provide best services</h2>
+                        <p class="slider-caption-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                            Aliquid repellat, possimus vel, facere iusto 
+                        </p>
+                        <a class="btn main-btn text-upper">purchase now</a>
+                        <a class="btn main-btn text-upper">learn more</a>
+                    </div>
+                </div>
+                <div class="img-item">
+                    <img src="image/slider/slide3.jpg">
+                    <div class="slider-caption">
+                        <h2 class="slider-caption-heading text-upper">we provide best services</h2>
+                        <p class="slider-caption-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                            Aliquid repellat, possimus vel, facere iusto 
+                        </p>
+                        <a class="btn main-btn text-upper">purchase now</a>
+                        <a class="btn main-btn text-upper">learn more</a>
+                    </div>
+                </div>
+                <div class="img-item">
+                    <img src="image/slider/slide1.jpg">
+                    <div class="slider-caption">
+                        <h2 class="slider-caption-heading text-upper">we provide best services</h2>
+                        <p class="slider-caption-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                            Aliquid repellat, possimus vel, facere iusto 
+                        </p>
+                        <a class="btn main-btn text-upper">purchase now</a>
+                        <a class="btn main-btn text-upper">learn more</a>
+                    </div>
+                </div>
             </figure>
         </div>
     </div>
@@ -553,12 +603,12 @@
             <div class="touch-form">
                 <form action="#">
                     <div class="section-1-form">
-                        <input type="text" placeholder="Full Name" name="name">
-                        <input type="email" placeholder="Email Address" name="email">
-                        <input type="text" placeholder="Subject" name="subject">
+                        <input type="text" required placeholder="Full Name" name="name">
+                        <input type="email" required placeholder="Email Address" name="email">
+                        <input type="text" required placeholder="Subject" name="subject">
                     </div>
                     <div class="section-2-form">
-                        <textarea rows="7" placeholder="Your Message"></textarea>
+                        <textarea rows="7" required placeholder="Your Message"></textarea>
                     </div>
                     <div class="section-3-form">
                         <button class="btn main-btn text-upper">send message</button>
@@ -575,7 +625,7 @@
         <div class="contact-detail">
             <div class="contact-address">
                 <div class="contact contact-icon">
-                    <i class="fa fa-map-marker" aria-hidden="true"></i>
+                    <i class="fa fa-map-marker map-icon" aria-hidden="true"></i>
                 </div>
                 <div class="contact contact-text">
                     <h4 class="contact-heading text-upper">address</h4>

@@ -1,5 +1,4 @@
 @import 'utilities';
-@import 'media';
 @import 'slider';
 
 .main-btn{
@@ -12,6 +11,9 @@
     &:hover{
         background-color: var(--dark-color);
     }
+}
+.hamburgur{
+    display: none;
 }
  
 /*accordian style*/
@@ -85,9 +87,7 @@
         text-align: center;
     }
     &-heading{
-        // text-transform: uppercase;
         color: var(--dark-color);
-        // background-color: red;
         padding-bottom: 1rem;
         margin-bottom: 1rem;
         position: relative;
@@ -121,8 +121,6 @@ header{
     .header{
         &-content{
             padding: .5rem 1rem;
-            // display: flex;
-            // justify-content: space-between;
             @extend %flex-property;
             align-items: center;
         }
@@ -134,12 +132,16 @@ header{
         }
         &-right-content{
             @extend %flex-property;
-            // display: flex;
-            // justify-content: space-between;
             li{
                 margin-right: 5rem;
                 .header-text{
                     position: relative;
+                    p{
+                        line-height: 1rem;
+                        &:last-child{
+                            font-weight: bold;
+                        }
+                    }
                     .header-icons{
                         position: absolute;
                         border-radius: 50%;
@@ -174,13 +176,17 @@ header{
 nav{
     background-color: var(--main-color);
     .navbar{
+        #myLinks{
+            display: none;
+            text-align: right;
+        }
         @extend %flex-property;
-        // display: flex;
         justify-content: flex-end;
         li{
-            margin-right: 2.5rem;
+            // margin-right: -10rem;
             padding: .8rem;
             a{
+                margin-right: 0;
                 color: var(--white-color);
                 text-transform: uppercase;
                 font-weight: bold;
@@ -227,12 +233,9 @@ nav{
                 }
             }
             .about-items{
-                // padding: 2rem 0;
                 width: 60%;
                 @extend %flex-property;
-                // display: flex;
                 align-items: center;
-                // justify-content: space-between;
                 flex-wrap: wrap;
                 .about-item{
                     margin-bottom: 1rem;
@@ -258,7 +261,6 @@ nav{
     //section skills
     &-skills{
         padding: 2rem 0;
-        // background-color: red;
         .skills{
             &-heading{
                 text-align: center;
@@ -271,7 +273,6 @@ nav{
                     padding: 2rem 0;
                     flex-basis: calc(100%/2 - 1rem);
                     &-accordian{
-                        // background-color: red;
                         margin: 2rem 0 0 1rem;
                     }
                 }
@@ -304,8 +305,6 @@ nav{
     //section-activity
     &-activity{
         @extend %flex-property;
-        // display: flex;
-        // justify-content: space-between;
         border: 1px solid var(--light-color);
         margin: 2rem 0;
 
@@ -353,8 +352,6 @@ nav{
         padding: 3rem 0;
         .service-cards{
             @extend %flex-property;
-            // display: flex;
-            // justify-content: space-between;
             flex-wrap: wrap;
 
             .service-card{
@@ -415,21 +412,7 @@ nav{
     &-video{
         margin: 2rem 0;
     }
-    //     position: relative;
-    //     margin-bottom: 2rem;
-    //     z-index: 1;
-    //     &::after{
-    //         content: '';
-    //         // z-index: -1;
-    //         position: absolute;
-    //         top: 0;
-    //         left: 0;
-    //         width: 100%;
-    //         height: 100%;
-    //         background-color: rgba(0,0,0,0.5);
-    //     }
-    // }
-
+    
     //sectionn work
     &-work{
         .work-nav{
@@ -455,8 +438,6 @@ nav{
         }
         .work-images{
             @extend %flex-property;
-            // display: flex;
-            // justify-content: space-between;
             flex-wrap: wrap;
             
             .work-image{
@@ -490,11 +471,8 @@ nav{
         padding: 2rem 0;
         .team-cards{
             @extend %flex-property;
-            // display: flex;
-            // justify-content: space-between;
             align-items: center;
             .team-card{
-                // background-color: red;
                 flex-basis: calc(100%/4 - 1rem);
                 img{
                     width: 100%;
@@ -520,8 +498,6 @@ nav{
         padding: 2rem 0;
         .pricing-cards{
             @extend %flex-property;
-            // display: flex;
-            // justify-content: space-between;
             align-items: center;
 
             .pricing-card{
@@ -573,9 +549,7 @@ nav{
 
     //section news
     &-news{
-        // background-color: green;
         padding: 2rem 0;
-        // margin-bottom: rem;
         .news-cards{
             @extend %flex-property;
             align-items: center;
@@ -821,8 +795,10 @@ footer{
         &-social{
             @extend %flex-property;
             justify-content: center;
+            width: 20%;
+            margin: 0 auto;
             li{
-                margin: 1rem 2rem;
+                margin: 1rem 0;
                 a{
                     color: var(--white-color);
                     font-size: 1.5rem;
@@ -835,3 +811,6 @@ footer{
         }
     }
 }
+
+
+@import 'media';
