@@ -231,6 +231,9 @@ h2 {
     :nth-child(odd) {
       color: var(--font-light);
     }
+    a {
+      color: var(--font-dark);
+    }
   }
 }
 

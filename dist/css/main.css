@@ -221,6 +221,8 @@ h2 + p {
     padding: 1px; }
   .contact-inf .content-contact :nth-child(odd) {
     color: var(--font-light); }
+  .contact-inf .content-contact a {
+    color: var(--font-dark); }
 
 .bottom-nav {
   background: var(--main-color);
