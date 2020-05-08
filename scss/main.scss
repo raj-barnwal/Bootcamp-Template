@@ -150,7 +150,9 @@ header{
     .header{
         &-content{
             padding: .5rem 1rem;
-            @extend %flex-property;
+            display: grid;
+            grid-template-columns: auto auto;
+            justify-content: space-between;
             align-items: center;
             position: relative;
             animation: 2s top-to-bottom-slide forwards ease-in-out;
@@ -162,7 +164,8 @@ header{
             }
         }
         &-right-content{
-            @extend %flex-property;
+            display: grid;
+            grid-template-columns: auto auto;
             
             li{
                 margin-right: 5rem;
@@ -212,7 +215,8 @@ nav{
             display: none;
             text-align: right;
         }
-        @extend %flex-property;
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
         justify-content: flex-end;
         li{
             padding: .8rem;
@@ -226,10 +230,7 @@ nav{
                 @extend %transition-shared;
                 &:hover{
                     color: var(--dark-color);
-                }
-            }
-            &:last-child{
-                margin-right: 0;
+                   }
             }
             &:hover{
                 transform: translateX(20px);
@@ -242,9 +243,9 @@ nav{
     &-about{
         padding: 2rem 0 4rem 0;
         .about-flex{
-            @extend %flex-property;
+            display: grid;
+            grid-template-columns: 40% 60%;
             .what-we-do{
-                width: 40%;
                 padding-right: 2rem;
                 position: relative;
                 animation: 2s left-to-right-slide forwards ease-in-out;
@@ -270,17 +271,14 @@ nav{
                 }
             }
             .about-items{
-                width: 60%;
-                @extend %flex-property;
-                align-items: center;
-                flex-wrap: wrap;
+                display: grid;
+                grid-template-columns: auto auto;
+                grid-gap: 1rem;
                 position: relative;
                 @extend %transition-shared;
                 animation: 2s right-to-left-slide forwards ease-in-out;
                 .about-item{
                     padding: 1rem;
-                    margin-bottom: 1rem;
-                    flex-basis: calc(100%/2 - 2rem);
                     &-icon{
                         font-size: 2rem;
                         padding: 1rem 0;
@@ -313,10 +311,11 @@ nav{
                 font-size: 1.5rem;
             }
             &-items{
-                @extend %flex-property;
+                display: grid;
+                grid-template-columns: 50% 50%;
+                grid-gap: 2rem;
                 .skills{
                     padding: 2rem 0;
-                    flex-basis: calc(100%/2 - 1rem);
                     &-accordian{
                         margin: 2rem 0 0 1rem;
                     }
@@ -359,12 +358,12 @@ nav{
 
     //section-activity
     &-activity{
-        @extend %flex-property;
+        display: grid;
+        grid-template-columns: repeat(4, auto);
+        grid-gap: 2rem 0;
         border: 1px solid var(--light-color);
-        margin: 2rem 0;
-
+        
         .activity-card{
-            flex-basis: calc(100%/4);
             text-align: center;
             padding: 5rem 1.5rem;
             position: relative;
@@ -417,14 +416,12 @@ nav{
     &-service{
         padding: 3rem 0;
         .service-cards{
-            @extend %flex-property;
-            flex-wrap: wrap;
-
+            display: grid;
+            grid-template-columns: repeat(4,auto);
+            grid-gap: 2rem;
             .service-card{
                 @extend %transition-shared;
-                flex-basis: calc(100%/4 - 1rem);
                 border: 1px solid var(--medium-color);
-                margin-bottom: 2rem;
                 text-align: center;
                 padding: 2rem;
                 cursor: pointer;
@@ -486,8 +483,8 @@ nav{
     //sectionn work
     &-work{
         .work-nav{
-            width: 60%;
-            @extend %flex-property;
+            display: grid;
+            grid-template-columns: repeat(5, auto);
             justify-content: center;
             margin: 1rem auto;
             position: relative;
@@ -513,14 +510,12 @@ nav{
             }
         }
         .work-images{
-            @extend %flex-property;
-            flex-wrap: wrap;
-            
+            display: grid;
+            grid-template-columns: repeat(3, auto);
+            grid-gap: 2rem;
             .work-image{
                 position: relative;
                 height: 300px;
-                margin-bottom: 2rem;
-                flex-basis: calc(100%/3 - 1rem);
                 cursor: pointer;
                 @extend %transition-shared;
                 img{
@@ -568,12 +563,12 @@ nav{
     &-team{
         padding: 2rem 0;
         .team-cards{
-            @extend %flex-property;
-            align-items: center;
+            display: grid;
+            grid-template-columns: repeat(4, auto);
+            grid-gap: 2rem;
             .team-card{
                 position: relative;
                 @extend %transition-shared;
-                flex-basis: calc(100%/4 - 1rem);
                 img{
                     width: 100%;
                     height: 250px;
@@ -600,11 +595,10 @@ nav{
     &-pricing{
         padding: 2rem 0;
         .pricing-cards{
-            @extend %flex-property;
-            align-items: center;
-
+            display: grid;
+            grid-template-columns: repeat(4, auto);
+            grid-gap: 2rem;
             .pricing-card{
-                flex-basis: calc(100%/4 - 1rem);
                 text-align: center;
                 border: 1px solid var(--medium-color);
                 padding: 2rem;
@@ -657,10 +651,10 @@ nav{
     &-news{
         padding: 2rem 0;
         .news-cards{
-            @extend %flex-property;
-            align-items: center;
+            display: grid;
+            grid-template-columns: repeat(3, auto);
+            grid-gap: 2rem;
             .news-card{
-                flex-basis: calc(100%/3 - 1rem);
                 @extend %transition-shared;
                 img{
                     width: 100%;
@@ -673,9 +667,8 @@ nav{
                     background-color:var (--dark-color);
                 }
                 &-highlited{
-                    // display: flex;
-                    @extend %flex-property;
-                    justify-content: flex-start;
+                    display: grid;
+                    grid-template-columns:1fr 1.5fr 2fr;
                     li{
                         padding: 0 1rem;
                         line-height: .7rem;
@@ -713,17 +706,16 @@ nav{
     &-logos{
         padding: 2rem 0;
         .logos-items{
-            @extend %flex-property;
-            align-items: center;
+            display: grid;
+            grid-template-columns: repeat(5, auto);
+            grid-gap: 1rem;
             .logo-item{
                 position: relative;
                 @extend %transition-shared;
-                flex-basis: calc(100%/5 - 1rem);
                 height: 120px;
                 margin: auto;
                 text-align: center;
                 padding: 2rem 0 1rem 0 ;
-                align-self: center;
                 border: 1px solid var(--medium-color);
                 img{
                     margin: auto;
@@ -742,19 +734,18 @@ nav{
     &-signup{
         margin: 2rem 0;
         background: linear-gradient( rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../image/contactbanner.jpg') no-repeat right center / cover;
-        min-height: 100px;
+        min-height: 150px;
         background-attachment: fixed;
         .signup-flex{
-            @extend %flex-property;
-            justify-content: space-around;
             align-items: center;
+            display: grid;
+            grid-template-columns: repeat(2, auto);
             .signup{
                 text-align: center;
-                flex-basis: calc(100%/2);
                 &-text{
                     text-align: left;
                     background-color: var(--main-color);
-                    padding: 5% 0 5% 8%;
+                    padding: 7% 0 7.5% 8%;
                     &-heading{
                         color: var(--white-color);
                         .dark-color{
@@ -798,10 +789,11 @@ nav{
             margin:  0 auto;
             .section{
                 &-1-form{
-                    @extend %flex-property;
+                    display: grid;
+                    grid-template-columns: repeat(3, auto);
+                    grid-gap:1rem;
                     margin: 1rem 0;
                     input[type=text], input[type=email]{
-                        flex-basis: calc(100%/3 - 1rem);
                         height: 40px;
                         padding-left: 3px;
                     }
@@ -835,12 +827,11 @@ nav{
            background-color: var(--main-color);
             width: 30%;
             .contact-address{
-                @extend %flex-property;
-                justify-content: flex-start;
                 align-items: center;
+                display: grid;
+                grid-template-columns: 1fr 2fr;
                 padding: 1rem;
                 .contact{
-                    flex-basis: calc(100%/2 - 1rem);
                     text-align: left;
                     &-icon{
                         text-align:center;
@@ -870,9 +861,9 @@ nav{
            padding: 2rem;
             .get-it{
                 &-flex{
-                    @extend %flex-property;
-                    justify-content: space-around;
                     align-items: center;
+                    display: grid;
+                    grid-template-columns: 3fr 1fr;
                 }
                 &-text{
                     color: var(--white-color);
@@ -884,6 +875,7 @@ nav{
                 color: var(--main-color);
                 font-weight: bold;
                 cursor: pointer;
+                padding: 1rem 0;
                 &:hover{
                     background-color: var(--dark-color);
                     color: var(--white-color);
@@ -902,9 +894,9 @@ footer{
             font-size: 1.5rem;
         }
         &-social{
-            @extend %flex-property;
-            justify-content: center;
             width: 20%;
+            display: grid;
+            grid-template-columns: repeat(4, auto);
             margin: 0 auto;
             li{
                 margin: 1rem 0;

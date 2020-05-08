@@ -45,7 +45,9 @@
         .header{
             &-content{
                 padding: 0;
-                flex-direction: column;
+                grid-template-columns: auto;
+                justify-content: center;
+                text-align: center;
             }
             &-right-content{
                 padding: 1rem;
@@ -94,7 +96,7 @@
         &-about{
             padding: 2rem 0 4rem 0;
             .about-flex{
-                flex-direction: column;
+                grid-template-columns: auto;
                 .what-we-do{
                     width: 100%;
                     padding-right: 0;
@@ -103,7 +105,6 @@
                         font-size: 2rem;
                         color: var(--dark-color);
                         padding: 1rem 0;
-                        // text-transform: uppercase;
                     }
                     .do-desc{
                         color: var(--medium-color);
@@ -117,7 +118,7 @@
                 }
                 .about-items{
                     width: 100%;
-                    flex-direction: column;
+                    grid-template-columns: auto;
                 }
             }
         }
@@ -127,7 +128,8 @@
             padding: 2rem 0;
             .skills{
                 &-items{
-                    flex-direction: column;
+                    grid-template-columns: auto;
+                    grid-gap: 1rem;
                     .skills{
                         &-accordian{
                             margin: 2rem 0;
@@ -140,15 +142,15 @@
 
         //section-activity
         &-activity{
-            flex-direction: column;
+            grid-template-columns: auto;
+            grid-gap: 0;
         }
 
         //secction service
         &-service{
             padding: 3rem 0;
             .service-cards{
-                flex-direction: column;
-                flex-wrap: nowrap;
+                grid-template-columns: auto;
             }
         }
         //section video
@@ -159,21 +161,19 @@
         //sectionn work
         &-work{
             .work-nav{
-                flex-wrap: wrap;
-                justify-content: space-between;
+                grid-template-columns: repeat(2, auto);
+                justify-content: space-around;
                 li{
                     margin-right: 0;
                 }
             }
             .work-images{
-                flex-direction: column;
-                flex-wrap: nowrap;
-                
+                grid-template-columns: auto;
+                grid-gap: 1rem;
                 .work-image{
                     position: relative;
                     height: auto;
                     margin-bottom: 2rem;
-                    flex-basis: calc(100%/3 - 1rem);
                     cursor: pointer;
                     img{
                         width: 100%;
@@ -188,9 +188,6 @@
                         transform: translate(-50%, -50%);
                         color: var(--white-color);
                     }
-                    &:hover{
-
-                    }
                 }
             }
         }
@@ -199,7 +196,8 @@
         &-team{
             padding: 2rem 0;
             .team-cards{
-                flex-direction: column;
+                grid-template-columns: auto;
+                grid-gap: 1rem;
                 align-items: center;
                 .team-card{
                     margin-bottom: 1rem;
@@ -215,7 +213,7 @@
         &-pricing{
             padding: 2rem 0;
             .pricing-cards{
-                flex-direction: column;
+                grid-template-columns: auto;
                 .pricing-card{
                     margin-bottom: 1rem;
                     width: 100%;
@@ -227,16 +225,15 @@
         &-news{
             padding: 2rem 0;
             .news-cards{
-                flex-direction: column;
+                grid-template-columns: auto;
             }
         }
 
         //section logo
         &-logos{
             .logos-items{
-                flex-direction: column;
+                grid-template-columns: auto;
                 .logo-item{
-                    flex-basis: calc(100%/5 - 1rem);
                     height: 120px;
                     margin:0 0 1rem 0;
                     img{
@@ -253,7 +250,7 @@
             background: linear-gradient( rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../image/contactbanner.jpg') no-repeat right center / cover;
             min-height: 300px;
             .signup-flex{
-                flex-direction: column;
+                grid-template-columns: auto;
                 .signup{
                     text-align: center;
                     width: 100%;
@@ -284,7 +281,7 @@
                 margin: 1rem 0;
                 .section{
                     &-1-form{
-                        flex-direction: column;
+                        grid-template-columns: auto;
                         justify-items: center;
                         input[type=text], input[type=email]{
                             width: 100%;
@@ -317,8 +314,8 @@
                 width: 100%;
                     .contact-address{
                         border-bottom: 1px solid var(--medium-color);
-                        flex-direction: column;
-                        justify-content: space-between;
+                        grid-template-columns: auto;
+                        justify-content: center;
                         padding: 1rem;
                         .contact{
                             width: 100%;
@@ -339,7 +336,7 @@
                 .get-it{
                     &-flex{
                         text-align: center;
-                       flex-direction: column;
+                        grid-template-columns: auto;
                     }
                 }
             }
@@ -379,7 +376,9 @@
         .header{
             &-content{
                 padding: 1rem 0;
-                flex-direction: column;
+                grid-template-columns: auto;
+                justify-content: center;
+                text-align: center;
             }
             &-right-content{
                 justify-content: center;
@@ -405,9 +404,7 @@
     nav{
         background-color: var(--main-color);
         .navbar{
-            justify-content: flex-end;
             li{
-                // margin-right: -10rem;
                 padding: .8rem;
                 a{
                     font-size: 1rem;
@@ -420,7 +417,7 @@
         &-about{
             padding: 2rem 0 4rem 0;
             .about-flex{
-                flex-direction: column;
+                grid-template-columns: auto;
                 .what-we-do{
                     width: 100%;
                     padding-right: 0;
@@ -443,7 +440,6 @@
                     width: 100%;
                     .about-item{
                         margin-bottom: 1rem;
-                        flex-basis: calc(100%/2 - 2rem);
                         &-icon{
                             font-size: 3rem;
                         }
@@ -463,9 +459,9 @@
 
         //section-activity
         &-activity{
-            flex-wrap: wrap;
+            grid-template-columns: repeat(2, auto);
+            grid-gap: 0;
             .activity-card{
-                flex-basis: calc(100%/2);
                 margin-bottom: 1rem;
                 &-icon{
                     font-size: 2.5rem;
@@ -493,7 +489,7 @@
                     font-size: 2.5rem;
                 }
                 &-items{
-                    flex-direction: column;
+                    grid-template-columns: auto;
                     .skills{
                         padding: 2rem 0;
                         width: 100%;
@@ -510,9 +506,8 @@
         &-service{
             padding: 3rem 0;
             .service-cards{
-                flex-wrap: wrap;
-                .service-card{
-                    flex-basis: calc(100%/2 - 1rem);    
+                grid-template-columns: repeat(2, auto);
+                .service-card{   
                     &-icon{
                         font-size: 3rem;
                         padding: 1.6rem;
@@ -543,11 +538,9 @@
                 }
             }
             .work-images{
-                flex-wrap: wrap;
+                grid-template-columns: repeat(2, auto);
                 .work-image{
                     height: 300px;
-                    flex-basis: calc(100%/2 - 1rem);
-                    
                     .work-caption{
                         position: absolute;
                         top: 50%;
@@ -557,9 +550,6 @@
                         transform: translate(-50%, -50%);
                         color: var(--white-color);
                     }
-                    &:hover{
-    
-                    }
                 }
             }
         }
@@ -567,11 +557,10 @@
         //section team
         &-team{
             .team-cards{
-                flex-wrap: wrap;
+                grid-template-columns: repeat(2, auto);
                 align-items: center;
                 .team-card{
                     margin-bottom: 2rem;
-                    flex-basis: calc(100%/2 - 1rem);
                     .team-caption{
                         h4{
                             font-size: 1.5rem;
@@ -587,10 +576,9 @@
         //section pricing
         &-pricing{
             .pricing-cards{
-                flex-wrap: wrap;
+                grid-template-columns: repeat(2, auto);
                 .pricing-card{
                     margin-bottom: 1rem;
-                    flex-basis: calc(100%/2 - 1rem);
                     &-heading{
                         font-size: 2rem;
                         margin: 1rem 0;
@@ -616,7 +604,7 @@
         //section news
         &-news{
             .news-cards{
-                flex-direction: column;
+                grid-template-columns: auto;
                 .news-card{
                     width: 70%;
                     margin: 1rem auto;
@@ -628,9 +616,10 @@
                         font-size: 2rem;
                     }
                     &-highlited{
+                        grid-template-columns: repeat(3, auto);
                         li{
                             padding:0 1rem;
-                            line-height: 1rem;
+                            line-height: 1.5rem;
                             margin: 1.6rem 0;
                             font-size: 1.5rem;
                         }
@@ -653,11 +642,12 @@
         //section logo
         &-logos{
             .logos-items{
-                flex-wrap: wrap;
+                grid-template-columns: repeat(2, auto);
+                grid-gap: .5rem;
+                justify-content: center;
                 .logo-item{
-                    flex-basis: calc(100%/2 - 1rem);
                     height: 120px;
-                    margin:2rem auto;
+                    margin:1rem auto;
                     text-align: center;
                 }
             }
@@ -667,7 +657,7 @@
         &-signup{
             min-height: 450px;
             .signup-flex{
-                flex-direction: column;
+                grid-template-columns: auto;
                 .signup{
                     width: 100%;
                     &-text{
@@ -708,14 +698,13 @@
                 margin:  0 auto;
                 .section{
                     &-1-form{
-                        flex-direction: column;
+                        grid-template-columns: auto;
                         margin: 1rem 0;
                         input[type=text], input[type=email]{
                             width: 100%;
                             border: 1px solid var(--dark-color);
-                            margin: 1rem 0;
-                            padding: 1rem .5rem;
-                            font-size: 2rem;
+                            padding: 1.5rem .5rem;
+                            font-size: 1.5rem;
                         }
                     }
                     &-2-form{
@@ -747,7 +736,6 @@
                 .contact-address{
                     padding: 1rem;
                     .contact{
-                        flex-basis: calc(100%/2 - 1rem);
                         text-align: left;
                         &-icon{
                             text-align:center;
