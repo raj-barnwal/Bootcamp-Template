@@ -4,10 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BIZ CARE</title>
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
     <link rel="stylesheet" href="./css/main.css">
-    <title>BIZ CARE</title>
+
+
 </head>
 
 <body>
@@ -120,28 +122,28 @@
                         <i class="las la-check la-2x icons"></i>
                         <div class="stats">
                             <h4 class="matter-heading-small lead">Projects complete</h4>
-                            <p class="figure">290</p>
+                            <p class="counter">290</p>
                         </div>
                     </li>
                     <li>
                         <i class="las la-handshake la-2x icons"></i>
                         <div class="stats">
                             <h4 class="matter-heading-small lead">Happy Clients</h4>
-                            <p class="figure">550</p>
+                            <p class="counter">550</p>
                         </div>
                     </li>
                     <li>
                         <i class="las la-envelope-open-text la-2x icons"></i>
                         <div class="stats">
                             <h4 class="matter-heading-small lead">Mail conversation</h4>
-                            <p class="figure">630</p>
+                            <p class="counter">630</p>
                         </div>
                     </li>
                     <li>
                         <i class="las la-camera la-2x icons"></i>
                         <div class="stats">
                             <h4 class="matter-heading-small lead">Photos taken</h4>
-                            <p class="figure">420</p>
+                            <p class="counter">420</p>
                         </div>
                     </li>
                 </ul>
@@ -571,41 +573,7 @@
         </div>
     </footer>
 
-
-    <script>
-        // Get the video
-        var video = document.getElementById("myVideo");
-
-        // Get the button
-        var btn = document.getElementById("playButton");
-
-        // Pause and play the video, and change the button text
-        function playFunction() {
-            if (video.paused) {
-                video.play();
-                btn.innerHTML = '<i class="las la-pause la-5x"></i>';
-                btn.nextElementSibling.style.opacity = "0";
-                btn.parentElement.style.backgroundColor = "rgba(0,0,0,0)";
-
-            } else {
-                video.pause();
-                btn.innerHTML = '<i class="las la-play la-5x"></i>';
-                btn.nextElementSibling.style.opacity = "1";
-                btn.parentElement.style.backgroundColor = "rgba(0,0,0,0.5)";
-            }
-        }
-
-        function validateForm() {
-            var x = document.forms["myForm"]["name"].value;
-            var y = document.forms["myForm"]["email"].value;
-            var z = document.forms["myForm"]["subject"].value;
-            var a = document.forms["myForm"]["message"].value;
-            if ((x == "") || (y == "") || (z == "") || (a == "")) {
-                alert("Please fill out the complete form!");
-                return false;
-            }
-        }
-    </script>
+    <script src="./js/script.js"></script>
 </body>
 
 </html>

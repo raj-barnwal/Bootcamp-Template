@@ -38,6 +38,9 @@ body {
     &-upper {
         @include flex;
         padding: 2rem 0;
+        transform: translateY(-4rem);
+        opacity: 0;
+        animation: slide-in-from-top 0.3s forwards ease;
         .logo {
             @include flex;
             img {
@@ -73,6 +76,9 @@ body {
         ul {
             display: flex;
             justify-content: flex-end;
+            transform: translateX(-5rem);
+            opacity: 0;
+            animation: slide-in-from-left 0.3s forwards ease;
             li {
                 padding: 2rem 0;
                 text-transform: uppercase;
@@ -170,7 +176,7 @@ body {
             .icons {
                 margin-right: 2rem;
             }
-            .figure {
+            .counter {
                 font-size: 3rem;
                 color: var(--primary-color);
             }
@@ -590,6 +596,21 @@ footer {
         display: flex;
         flex-direction: column;
         align-items: center;
+    }
+}
+
+// KEYFRAMES
+@keyframes slide-in-from-top {
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slide-in-from-left {
+    100% {
+        opacity: 1;
+        transform: translateX(0);
     }
 }
 
