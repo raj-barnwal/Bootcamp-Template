@@ -1,0 +1,143 @@
+@media (max-width: 768px) {
+  .row-space-between,
+  .row-style-res {
+    flex-direction: column;
+  }
+
+  .two-col-grid {
+    grid-template-columns: auto;
+  }
+
+  .three-col-grid {
+    grid-template-columns: auto;
+  }
+
+  .four-col-grid {
+    grid-template-columns: auto auto;
+  }
+  // header
+
+  header {
+    .nav-contact {
+      .contact-details > div {
+        text-align: center;
+      }
+    }
+    nav {
+      ul {
+        text-align: center;
+      }
+    }
+  }
+
+  // about
+
+  .section-about {
+    .about-container {
+      text-align: center;
+    }
+  }
+  // achievements
+
+  .section-achievements {
+    text-align: center;
+    & > div {
+      & {
+        div:last-child {
+          margin: 0 auto;
+        }
+      }
+
+      &:nth-child(1n + 1) {
+        background-color: #d3d0d0;
+      }
+
+      &:nth-child(3n + 1) {
+        background-color: #e6e4e4;
+      }
+    }
+  }
+
+  // work
+
+  .section-work {
+    .work-container {
+      & > div {
+        flex-basis: 45%;
+      }
+    }
+  }
+
+  // service
+
+  .section-service {
+    .service {
+      &-card {
+        flex-basis: calc(100% / 2 - 20px);
+      }
+    }
+  }
+
+  // team
+
+  .section-team {
+    .team-container {
+      & > div {
+        flex-basis: calc(100% / 2 - 20px);
+      }
+    }
+  }
+
+  // contact-info
+
+  .section-contact-info {
+    .contact-wrap {
+      width: 80%;
+      text-align: center;
+    }
+  }
+
+  .banner {
+    div {
+      text-align: center;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .section-achievements {
+    & > div {
+      flex-basis: 100%;
+
+      &:nth-child(even) {
+        background-color: #e6e4e4;
+      }
+
+      &:nth-child(odd) {
+        background-color: #d3d0d0;
+      }
+    }
+  }
+
+  .section-work {
+    .work-container {
+      & > div {
+        flex-basis: 100%;
+      }
+    }
+  }
+
+  // service
+
+  .section-service {
+    .service {
+      &-card {
+        flex-basis: calc(100% / 1 - 20px);
+      }
+    }
+  }
+
+  .four-col-grid {
+    grid-template-columns: auto;
+  }
+}

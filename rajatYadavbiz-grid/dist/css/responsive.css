@@ -1,0 +1,49 @@
+@media (max-width: 768px) {
+  .row-space-between,
+  .row-style-res {
+    flex-direction: column; }
+  .two-col-grid {
+    grid-template-columns: auto; }
+  .three-col-grid {
+    grid-template-columns: auto; }
+  .four-col-grid {
+    grid-template-columns: auto auto; }
+  header .nav-contact .contact-details > div {
+    text-align: center; }
+  header nav ul {
+    text-align: center; }
+  .section-about .about-container {
+    text-align: center; }
+  .section-achievements {
+    text-align: center; }
+    .section-achievements > div div:last-child {
+      margin: 0 auto; }
+    .section-achievements > div:nth-child(1n + 1) {
+      background-color: #d3d0d0; }
+    .section-achievements > div:nth-child(3n + 1) {
+      background-color: #e6e4e4; }
+  .section-work .work-container > div {
+    flex-basis: 45%; }
+  .section-service .service-card {
+    flex-basis: calc(100% / 2 - 20px); }
+  .section-team .team-container > div {
+    flex-basis: calc(100% / 2 - 20px); }
+  .section-contact-info .contact-wrap {
+    width: 80%;
+    text-align: center; }
+  .banner div {
+    text-align: center; } }
+
+@media (max-width: 500px) {
+  .section-achievements > div {
+    flex-basis: 100%; }
+    .section-achievements > div:nth-child(even) {
+      background-color: #e6e4e4; }
+    .section-achievements > div:nth-child(odd) {
+      background-color: #d3d0d0; }
+  .section-work .work-container > div {
+    flex-basis: 100%; }
+  .section-service .service-card {
+    flex-basis: calc(100% / 1 - 20px); }
+  .four-col-grid {
+    grid-template-columns: auto; } }
