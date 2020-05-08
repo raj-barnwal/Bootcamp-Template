@@ -32,7 +32,7 @@
   margin: 1rem auto;
   font-size: 1.1rem; }
 
-#header #brand h2:before, #header #brand li:nth-child(1):before, #header #brand li:nth-child(2):before, #about .stacks .card h3:before, #stats .container-fluid .card:before, #service .flex .card h2:before, #video h3:before, #work .container .cards .card:hover:after, #testimonials .container-fluid .content .name:before, #map .container .card li .text:before {
+#header #brand h2:before, #header #brand li:nth-child(1):before, #header #brand li:nth-child(2):before, #about .stacks .card h3:before, #stats .container-fluid .card:before, #service .grid .card h2:before, #video h3:before, #work .container .cards .card:hover:after, #testimonials .container-fluid .content .name:before, #map .container .card li .text:before {
   font-family: "Font Awesome 5 Free";
   color: var(--color-main);
   display: block; }
@@ -66,6 +66,9 @@
 .flex {
   display: flex;
   flex-wrap: wrap; }
+
+.grid {
+  display: grid; }
 
 .btn {
   padding: 1rem;
@@ -236,6 +239,7 @@ input {
 #header #brand {
   justify-content: space-between;
   align-items: center;
+  grid-template-columns: 1fr auto;
   padding-top: 2rem;
   padding-bottom: 2rem; }
   #header #brand h2:before {
@@ -246,6 +250,8 @@ input {
     padding: 0.5rem;
     margin-right: 0.5rem;
     background-color: var(--color-main); }
+  #header #brand ul {
+    grid-template-columns: 1fr 1fr; }
   #header #brand li {
     padding-right: 2rem;
     padding-left: 2rem;
@@ -282,6 +288,7 @@ input {
   padding-top: 1rem;
   padding-bottom: 1rem; }
   #header #links ul {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     justify-content: flex-end; }
     #header #links ul li {
       padding: 0.3rem 1rem;
@@ -302,6 +309,8 @@ input {
     position: relative; }
     #slides .container-fluid .slide .btn-main {
       margin-right: 2rem; }
+    #slides .container-fluid .slide p {
+      margin: 0 auto; }
   #slides .container-fluid .arrow {
     cursor: pointer;
     position: absolute;
@@ -337,19 +346,17 @@ input {
     justify-content: center;
     align-items: center; }
 
+#about .container > .grid {
+  grid-column-gap: 2rem;
+  grid-template-columns: repeat(2, 1fr); }
+
 #about .container > .lead {
   margin-bottom: 4rem; }
 
-#about .what-we-do {
-  flex: 1;
-  padding-right: 1.5rem; }
-
 #about .stacks {
-  flex: 2;
-  justify-content: space-between; }
+  grid-column-gap: 1rem;
+  grid-template-columns: repeat(2, 1fr); }
   #about .stacks .card {
-    flex: 0 1 calc((100% / 2) - 0.5rem);
-    padding-right: 1.5rem;
     margin-bottom: 1rem; }
     #about .stacks .card h3 {
       text-transform: uppercase;
@@ -366,76 +373,80 @@ input {
     #about .stacks .card:nth-child(4) h3:before {
       content: '\f1d8'; }
 
-#stats .container-fluid .card {
-  flex: 0 1 calc((100% / 4));
-  padding: 5rem 0rem;
-  justify-content: center;
-  align-items: center; }
-  #stats .container-fluid .card:before {
-    height: 50px;
-    width: 50px;
-    text-align: center;
-    line-height: 50px;
-    margin-right: 1.5rem;
-    border-radius: 50%;
-    border: 1px solid var(--color-main); }
-  #stats .container-fluid .card:nth-child(odd) {
-    background-color: #fafafa; }
-  #stats .container-fluid .card:nth-child(even) {
-    background-color: #dbdbdb; }
-  #stats .container-fluid .card:nth-child(1):before {
-    content: '\f0f8'; }
-  #stats .container-fluid .card:nth-child(2):before {
-    content: '\f2b5'; }
-  #stats .container-fluid .card:nth-child(3):before {
-    content: '\f0e0'; }
-  #stats .container-fluid .card:nth-child(4):before {
-    content: '\f0f8'; }
+#stats .container-fluid {
+  grid-template-columns: repeat(4, 1fr); }
+  #stats .container-fluid .card {
+    padding: 5rem 0rem;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: auto 1fr; }
+    #stats .container-fluid .card:before {
+      height: 50px;
+      width: 50px;
+      text-align: center;
+      line-height: 50px;
+      margin-right: 1.5rem;
+      border-radius: 50%;
+      border: 1px solid var(--color-main); }
+    #stats .container-fluid .card:nth-child(odd) {
+      background-color: #fafafa; }
+    #stats .container-fluid .card:nth-child(even) {
+      background-color: #dbdbdb; }
+    #stats .container-fluid .card:nth-child(1):before {
+      content: '\f0f8'; }
+    #stats .container-fluid .card:nth-child(2):before {
+      content: '\f2b5'; }
+    #stats .container-fluid .card:nth-child(3):before {
+      content: '\f0e0'; }
+    #stats .container-fluid .card:nth-child(4):before {
+      content: '\f0f8'; }
 
-#skills .flex {
-  justify-content: space-between; }
+#skills .grid {
+  justify-content: space-between;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 3rem; }
 
-#skills .collapsibles {
-  flex: 0 1 calc((100% / 2) - 1rem); }
-  #skills .collapsibles .collapsible {
-    background-color: var(--color-light);
-    color: var(--color-dark);
-    cursor: pointer;
-    padding: 18px;
-    width: 100%;
-    border: none;
-    text-align: left;
-    outline: none;
-    font-size: 1.3rem;
-    border: 1px solid var(--color-main);
-    border-bottom: none;
-    transition: all 1s ease-in-out; }
-    #skills .collapsibles .collapsible:hover {
-      background: var(--color-main);
-      color: var(--color-light); }
-      #skills .collapsibles .collapsible:hover:after {
-        color: var(--color-light); }
-    #skills .collapsibles .collapsible:after {
-      content: '\002B';
-      color: var(--color-dark);
-      font-weight: bold;
-      float: right;
-      margin-left: 5px; }
-  #skills .collapsibles .active {
-    background-color: var(--color-main);
+#skills .collapsibles .collapsible {
+  background-color: var(--color-light);
+  color: var(--color-dark);
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 1.3rem;
+  border: 1px solid var(--color-main);
+  border-bottom: none;
+  transition: all 1s ease-in-out; }
+  #skills .collapsibles .collapsible:hover {
+    background: var(--color-main);
     color: var(--color-light); }
-    #skills .collapsibles .active:after {
-      content: "\2212";
+    #skills .collapsibles .collapsible:hover:after {
       color: var(--color-light); }
-  #skills .collapsibles .content {
-    padding: 0 2rem;
-    max-height: 0;
-    overflow: hidden;
-    font-size: 1rem;
-    border: 1px solid var(--color-main);
-    margin-bottom: 1rem;
-    transition: max-height 0.2s ease-out;
-    background-color: var(--color-medium); }
+  #skills .collapsibles .collapsible:after {
+    content: '\002B';
+    color: var(--color-dark);
+    font-weight: bold;
+    float: right;
+    margin-left: 5px; }
+
+#skills .collapsibles .active {
+  background-color: var(--color-main);
+  color: var(--color-light); }
+  #skills .collapsibles .active:after {
+    content: "\2212";
+    color: var(--color-light); }
+
+#skills .collapsibles .content {
+  padding: 0 2rem;
+  max-height: 0;
+  overflow: hidden;
+  font-size: 1rem;
+  border: 1px solid var(--color-main);
+  margin-bottom: 1rem;
+  transition: max-height 0.2s ease-out;
+  background-color: var(--color-medium); }
 
 #skills .progress {
   flex: 0 1 calc((100% / 2) - 1rem); }
@@ -453,25 +464,26 @@ input {
   #skills .progress .progressbar ul li {
     font-size: 0.9rem; }
     #skills .progress .progressbar ul li:last-child {
-      color: var(--color-main); }
+      color: var(--color-main);
+      text-align: right; }
   #skills .progress .progressbar:nth-child(odd) #progressbar > div {
     width: 75%; }
   #skills .progress .progressbar:nth-child(even) #progressbar > div {
     width: 55%; }
 
-#service .flex {
-  justify-content: space-between;
-  overflow: hidden; }
-  #service .flex .card {
+#service .grid {
+  overflow: hidden;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 2rem; }
+  #service .grid .card {
     text-align: center;
     padding: 2rem;
-    flex: 0 1 calc((100% / 4) - 1rem);
     margin-bottom: 2rem;
     border: 1px solid lightgray;
     transition: all 1s ease-in-out; }
-    #service .flex .card h2 {
+    #service .grid .card h2 {
       font-size: 1.1rem; }
-      #service .flex .card h2:before {
+      #service .grid .card h2:before {
         height: 50px;
         width: 50px;
         text-align: center;
@@ -479,27 +491,27 @@ input {
         border-radius: 50%;
         border: 1px solid var(--color-main);
         margin: 1rem auto; }
-    #service .flex .card:hover {
+    #service .grid .card:hover {
       background-color: var(--color-main);
       color: var(--color-light);
       cursor: pointer; }
-      #service .flex .card:hover h2:before {
+      #service .grid .card:hover h2:before {
         background-color: var(--color-light); }
-    #service .flex .card:nth-child(1) h2:before {
+    #service .grid .card:nth-child(1) h2:before {
       content: '\f108'; }
-    #service .flex .card:nth-child(2) h2:before {
+    #service .grid .card:nth-child(2) h2:before {
       content: '\f302'; }
-    #service .flex .card:nth-child(3) h2:before {
+    #service .grid .card:nth-child(3) h2:before {
       content: '\f109'; }
-    #service .flex .card:nth-child(4) h2:before {
+    #service .grid .card:nth-child(4) h2:before {
       content: '\f013'; }
-    #service .flex .card:nth-child(5) h2:before {
+    #service .grid .card:nth-child(5) h2:before {
       content: '\f085'; }
-    #service .flex .card:nth-child(6) h2:before {
+    #service .grid .card:nth-child(6) h2:before {
       content: '\f07a'; }
-    #service .flex .card:nth-child(7) h2:before {
+    #service .grid .card:nth-child(7) h2:before {
       content: '\f0eb'; }
-    #service .flex .card:nth-child(8) h2:before {
+    #service .grid .card:nth-child(8) h2:before {
       content: '\f0a1'; }
 
 #video {
@@ -530,8 +542,10 @@ input {
   margin-bottom: 3rem; }
 
 #work .container ul {
-  justify-content: center; }
+  justify-content: center;
+  grid-template-columns: 150px 150px 150px 150px 150px; }
   #work .container ul li {
+    text-align: center;
     padding-left: 1rem;
     padding-right: 1rem;
     transition: color 1s ease-in-out; }
@@ -540,10 +554,10 @@ input {
       cursor: pointer; }
 
 #work .container .cards {
-  justify-content: space-between; }
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 2rem; }
   #work .container .cards .card {
     overflow: hidden;
-    flex: 0 1 calc((100% / 3) - 1rem);
     margin-bottom: 2rem;
     cursor: pointer;
     position: relative;
@@ -572,9 +586,10 @@ input {
   margin-bottom: 3rem; }
 
 #team .cards {
-  justify-content: space-between; }
+  justify-content: space-between;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 2rem; }
   #team .cards .card {
-    flex: 0 1 calc((100% / 4) - 1rem);
     margin-bottom: 1rem;
     text-align: center; }
     #team .cards .card .image {
@@ -645,7 +660,10 @@ input {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
     height: 80vh; }
+    #testimonials .container-fluid .content p {
+      margin: auto; }
     #testimonials .container-fluid .content .name:before {
       content: '\f0f8';
       color: var(--color-light);
@@ -673,10 +691,11 @@ input {
   margin-bottom: 3rem; }
 
 #pricing .cards {
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 2rem;
   justify-content: space-between; }
   #pricing .cards .card {
-    flex: 0 1 calc((100% / 4) - 1rem);
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
     text-align: center;
     border: 2px solid lightgray;
     transition: all 1s ease-in-out; }
@@ -693,10 +712,11 @@ input {
   margin-bottom: 3rem; }
 
 #news .cards {
-  justify-content: space-between; }
+  justify-content: space-between;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 2rem; }
   #news .cards .card {
-    flex: 0 1 calc((100% / 3) - 1rem);
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
     text-align: center; }
     #news .cards .card p:first-child {
       font-size: 1.2rem; }
@@ -705,16 +725,19 @@ input {
       border-color: var(--color-main); }
 
 #news .partners {
-  justify-content: space-between; }
+  justify-content: space-between;
+  grid-template-columns: repeat(5, 1fr);
+  grid-column-gap: 2rem; }
   #news .partners .card {
-    flex: 0 1 calc((100% / 5) - 1rem);
     margin-bottom: 2rem;
     border: 2px solid lightgray;
     padding: 2rem; }
 
+#newsletter .container-fluid {
+  grid-template-columns: repeat(2, 1fr); }
+
 #newsletter .card {
-  align-items: center;
-  flex: 1; }
+  align-items: center; }
   #newsletter .card:first-child {
     background: var(--color-main);
     padding-left: 6rem;
@@ -742,17 +765,19 @@ input {
 
 #get-in-touch .form {
   text-align: center; }
-  #get-in-touch .form .flex {
-    justify-content: space-between; }
-    #get-in-touch .form .flex input {
-      flex: 0 1 calc((100% / 3) - 1rem);
+  #get-in-touch .form .grid {
+    justify-content: space-between;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 2rem; }
+    #get-in-touch .form .grid input {
       width: 100%;
       margin-bottom: 2rem;
       border: 1px solid lightgray; }
   #get-in-touch .form textarea {
     width: 100%;
     border: 1px solid lightgray;
-    padding: 12px; }
+    padding: 12px;
+    margin-bottom: 2rem; }
 
 #map .container-fluid {
   background: url("../assets/images/map.png") center center/cover;
@@ -796,15 +821,19 @@ input {
   color: var(--color-light); }
   #footer #brand .container {
     justify-content: space-between;
-    align-items: center; }
+    align-items: center;
+    grid-template-columns: 1fr auto; }
 
 #footer #social {
   background: var(--color-dark);
   color: var(--color-light); }
   #footer #social .container {
     justify-content: center;
-    flex-direction: column;
     align-items: center; }
+    #footer #social .container .grid {
+      grid-template-columns: auto auto auto auto; }
+      #footer #social .container .grid:last-child {
+        justify-content: space-between; }
   #footer #social .fab {
     padding: 0 1rem; }
   #footer #social .copyright p:first-child {
@@ -813,42 +842,45 @@ input {
 @media (max-width: 575.98px) {
   .text-3 {
     font-size: 2rem; }
+  #header #brand ul {
+    grid-template-columns: repeat(1, 1fr); }
+    #header #brand ul li {
+      margin-bottom: 0.8rem; }
   #slides .container-fluid .slide .btn-main {
     margin-right: 0.5rem;
     margin-bottom: 1rem; }
   #testimonials .my-2 {
-    margin: 0.8rem 0; }
+    margin: 0.4rem 0; }
+  #testimonials .container-fluid .content .name:before {
+    margin: 0 auto; }
   .container {
     padding-left: 1.8rem;
     padding-right: 1.8rem; }
-  #header li {
-    margin-bottom: 0.8rem; }
-  #stats .container-fluid .card {
-    flex: 100%; }
-  #work .container .cards .card {
-    flex: 100%; }
+  #stats .container-fluid {
+    grid-template-columns: repeat(1, 1fr); }
+  #work .container .cards {
+    grid-template-columns: repeat(1, 1fr); }
+  #about .container .grid {
+    grid-template-columns: repeat(1, 1fr); }
   #about .what-we-do {
-    flex: 100%;
     margin-bottom: 4rem;
     text-align: center; }
-  #about .stacks {
-    flex: 100%; }
-    #about .stacks .card {
-      flex: 100%;
-      text-align: center; }
-  #service .flex .card {
-    flex: 100%; }
-  #team .cards .card {
-    flex: 100%; }
-  #pricing .cards .card {
-    flex: 100%;
-    margin-bottom: 2rem; }
-  #news .cards .card {
-    flex: 100%;
-    margin-bottom: 2rem; }
-  #news .partners .card {
-    flex: 100%;
-    margin-bottom: 2rem; }
+  #about .stacks .card {
+    text-align: center; }
+  #service .grid {
+    grid-template-columns: repeat(1, 1fr); }
+  #team .cards {
+    grid-template-columns: repeat(1, 1fr); }
+  #pricing .cards {
+    grid-template-columns: repeat(1, 1fr); }
+    #pricing .cards .card {
+      margin-bottom: 2rem; }
+  #news .cards {
+    grid-template-columns: repeat(1, 1fr); }
+  #news .partners {
+    grid-template-columns: repeat(1, 1fr); }
+    #news .partners .card {
+      margin-bottom: 2rem; }
   #footer {
     text-align: center; }
     #footer #brand .container {
@@ -858,8 +890,8 @@ input {
     #footer .container .copyright {
       text-align: center;
       justify-content: center; }
-  #newsletter .card {
-    flex: 100%; }
+  #newsletter .grid {
+    grid-template-columns: repeat(1, 1fr); }
   #map .container .card {
     width: 100%; }
     #map .container .card li {
@@ -871,51 +903,53 @@ input {
       width: 15px;
       font-size: 1rem;
       padding: 12px; }
-  #get-in-touch .form .flex input {
-    flex: 100%;
-    margin-bottom: 2rem; }
-  #get-in-touch .form textarea {
-    margin-bottom: 2rem; } }
+  #get-in-touch .form .grid {
+    grid-template-columns: repeat(1, 1fr); } }
 
 @media (max-width: 767.98px) {
   #header #brand {
+    grid-template-columns: repeat(1, 1fr);
     flex-direction: column;
     padding: 1rem 0; }
     #header #brand h2 {
-      margin-bottom: 1rem; }
+      margin-bottom: 1rem;
+      text-align: center; }
   #header #links ul {
     justify-content: center; }
-  #skills .collapsibles {
-    flex: 100%;
+  #skills .container > .grid {
+    grid-template-columns: repeat(1, 1fr); }
+  #skills .container .collapsibles {
     margin-bottom: 4rem; }
-  #skills .progress {
-    flex: 100%; }
-  #work .container .cards .card {
-    flex: 0 1 calc((100% / 2) - 1rem); } }
+  #work .container .cards {
+    grid-template-columns: repeat(2, 1fr); } }
 
 @media (min-width: 576px) and (max-width: 991.98px) {
+  #about .container > .grid {
+    grid-template-columns: repeat(1, 1fr); }
   #about .what-we-do {
-    flex: 100%;
     margin-bottom: 4rem;
     text-align: center; }
   #about .stacks {
     flex: 100%; }
-  #stats .container-fluid .card {
-    flex: 0 1 calc((100% / 2)); }
+  #stats .container-fluid {
+    grid-template-columns: repeat(2, 1fr); }
     #stats .container-fluid .card:nth-child(3) {
       background-color: #dbdbdb; }
     #stats .container-fluid .card:nth-child(4) {
       background-color: #fafafa; }
-  #service .flex .card {
-    flex: 0 1 calc((100% / 2) - 1rem); }
-  #team .cards .card {
-    flex: 0 1 calc((100% / 2) - 1rem); }
-  #pricing .cards .card {
-    flex: 0 1 calc((100% / 2) - 1rem);
-    margin-bottom: 2rem; }
-  #news .cards .card {
-    flex: 0 1 calc((100% / 2) - 1rem);
-    margin-bottom: 2rem; }
-  #news .partners .card {
-    flex: 0 1 calc((100% / 2) - 1rem);
-    margin-bottom: 2rem; } }
+  #service .grid {
+    grid-template-columns: repeat(2, 1fr); }
+  #team .cards {
+    grid-template-columns: repeat(2, 1fr); }
+  #pricing .cards {
+    grid-template-columns: repeat(2, 1fr); }
+    #pricing .cards .card {
+      margin-bottom: 2rem; }
+  #news .cards {
+    grid-template-columns: repeat(2, 1fr); }
+    #news .cards .card {
+      margin-bottom: 2rem; }
+  #news .partners {
+    grid-template-columns: repeat(3, 1fr); }
+    #news .partners .card {
+      margin-bottom: 2rem; } }

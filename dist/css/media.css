@@ -1,42 +1,45 @@
 @media (max-width: 575.98px) {
   .text-3 {
     font-size: 2rem; }
+  #header #brand ul {
+    grid-template-columns: repeat(1, 1fr); }
+    #header #brand ul li {
+      margin-bottom: 0.8rem; }
   #slides .container-fluid .slide .btn-main {
     margin-right: 0.5rem;
     margin-bottom: 1rem; }
   #testimonials .my-2 {
-    margin: 0.8rem 0; }
+    margin: 0.4rem 0; }
+  #testimonials .container-fluid .content .name:before {
+    margin: 0 auto; }
   .container {
     padding-left: 1.8rem;
     padding-right: 1.8rem; }
-  #header li {
-    margin-bottom: 0.8rem; }
-  #stats .container-fluid .card {
-    flex: 100%; }
-  #work .container .cards .card {
-    flex: 100%; }
+  #stats .container-fluid {
+    grid-template-columns: repeat(1, 1fr); }
+  #work .container .cards {
+    grid-template-columns: repeat(1, 1fr); }
+  #about .container .grid {
+    grid-template-columns: repeat(1, 1fr); }
   #about .what-we-do {
-    flex: 100%;
     margin-bottom: 4rem;
     text-align: center; }
-  #about .stacks {
-    flex: 100%; }
-    #about .stacks .card {
-      flex: 100%;
-      text-align: center; }
-  #service .flex .card {
-    flex: 100%; }
-  #team .cards .card {
-    flex: 100%; }
-  #pricing .cards .card {
-    flex: 100%;
-    margin-bottom: 2rem; }
-  #news .cards .card {
-    flex: 100%;
-    margin-bottom: 2rem; }
-  #news .partners .card {
-    flex: 100%;
-    margin-bottom: 2rem; }
+  #about .stacks .card {
+    text-align: center; }
+  #service .grid {
+    grid-template-columns: repeat(1, 1fr); }
+  #team .cards {
+    grid-template-columns: repeat(1, 1fr); }
+  #pricing .cards {
+    grid-template-columns: repeat(1, 1fr); }
+    #pricing .cards .card {
+      margin-bottom: 2rem; }
+  #news .cards {
+    grid-template-columns: repeat(1, 1fr); }
+  #news .partners {
+    grid-template-columns: repeat(1, 1fr); }
+    #news .partners .card {
+      margin-bottom: 2rem; }
   #footer {
     text-align: center; }
     #footer #brand .container {
@@ -46,8 +49,8 @@
     #footer .container .copyright {
       text-align: center;
       justify-content: center; }
-  #newsletter .card {
-    flex: 100%; }
+  #newsletter .grid {
+    grid-template-columns: repeat(1, 1fr); }
   #map .container .card {
     width: 100%; }
     #map .container .card li {
@@ -59,51 +62,53 @@
       width: 15px;
       font-size: 1rem;
       padding: 12px; }
-  #get-in-touch .form .flex input {
-    flex: 100%;
-    margin-bottom: 2rem; }
-  #get-in-touch .form textarea {
-    margin-bottom: 2rem; } }
+  #get-in-touch .form .grid {
+    grid-template-columns: repeat(1, 1fr); } }
 
 @media (max-width: 767.98px) {
   #header #brand {
+    grid-template-columns: repeat(1, 1fr);
     flex-direction: column;
     padding: 1rem 0; }
     #header #brand h2 {
-      margin-bottom: 1rem; }
+      margin-bottom: 1rem;
+      text-align: center; }
   #header #links ul {
     justify-content: center; }
-  #skills .collapsibles {
-    flex: 100%;
+  #skills .container > .grid {
+    grid-template-columns: repeat(1, 1fr); }
+  #skills .container .collapsibles {
     margin-bottom: 4rem; }
-  #skills .progress {
-    flex: 100%; }
-  #work .container .cards .card {
-    flex: 0 1 calc((100% / 2) - 1rem); } }
+  #work .container .cards {
+    grid-template-columns: repeat(2, 1fr); } }
 
 @media (min-width: 576px) and (max-width: 991.98px) {
+  #about .container > .grid {
+    grid-template-columns: repeat(1, 1fr); }
   #about .what-we-do {
-    flex: 100%;
     margin-bottom: 4rem;
     text-align: center; }
   #about .stacks {
     flex: 100%; }
-  #stats .container-fluid .card {
-    flex: 0 1 calc((100% / 2)); }
+  #stats .container-fluid {
+    grid-template-columns: repeat(2, 1fr); }
     #stats .container-fluid .card:nth-child(3) {
       background-color: #dbdbdb; }
     #stats .container-fluid .card:nth-child(4) {
       background-color: #fafafa; }
-  #service .flex .card {
-    flex: 0 1 calc((100% / 2) - 1rem); }
-  #team .cards .card {
-    flex: 0 1 calc((100% / 2) - 1rem); }
-  #pricing .cards .card {
-    flex: 0 1 calc((100% / 2) - 1rem);
-    margin-bottom: 2rem; }
-  #news .cards .card {
-    flex: 0 1 calc((100% / 2) - 1rem);
-    margin-bottom: 2rem; }
-  #news .partners .card {
-    flex: 0 1 calc((100% / 2) - 1rem);
-    margin-bottom: 2rem; } }
+  #service .grid {
+    grid-template-columns: repeat(2, 1fr); }
+  #team .cards {
+    grid-template-columns: repeat(2, 1fr); }
+  #pricing .cards {
+    grid-template-columns: repeat(2, 1fr); }
+    #pricing .cards .card {
+      margin-bottom: 2rem; }
+  #news .cards {
+    grid-template-columns: repeat(2, 1fr); }
+    #news .cards .card {
+      margin-bottom: 2rem; }
+  #news .partners {
+    grid-template-columns: repeat(3, 1fr); }
+    #news .partners .card {
+      margin-bottom: 2rem; } }

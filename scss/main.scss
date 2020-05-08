@@ -33,6 +33,7 @@ input{
     #brand{
         justify-content: space-between;
         align-items: center;
+        grid-template-columns: 1fr auto;
         padding-top: 2rem;
         padding-bottom: 2rem;
 
@@ -47,6 +48,10 @@ input{
                 margin-right: 0.5rem;
                 background-color: var(--color-main);
             }
+        }
+
+        ul{
+            grid-template-columns: 1fr 1fr;
         }
 
         li{
@@ -101,8 +106,8 @@ input{
         background:var(--color-main);
         padding-top: 1rem;
         padding-bottom: 1rem;
-
         ul{
+            grid-template-columns: repeat(auto-fit,minmax(100px,1fr));
             justify-content: flex-end;
             li{
                 padding: 0.3rem 1rem;
@@ -134,6 +139,9 @@ input{
 
         .btn-main{
             margin-right: 2rem;
+        }
+        p{
+            margin: 0 auto;
         }
     }
 
@@ -187,21 +195,18 @@ input{
 
 #about{
     .container{ 
+        &>.grid{
+        grid-column-gap: 2rem;
+        grid-template-columns: repeat(2, 1fr);}
         & > .lead{
         margin-bottom: 4rem;
         }
     }
 
-    .what-we-do{
-      flex: 1;
-      padding-right: 1.5rem;
-
-    }
 
     .stacks{
-      flex:2;
-      justify-content: space-between;
-
+        grid-column-gap: 1rem;
+        grid-template-columns: repeat(2, 1fr);
       .card{
        h3{
         text-transform: uppercase;
@@ -212,8 +217,6 @@ input{
             font-size: 2rem;
         }
        }
-          flex: 0 1 calc((100% / 2) - 0.5rem);
-          padding-right: 1.5rem;
           margin-bottom: 1rem;
 
           &:nth-child(1){
@@ -251,12 +254,13 @@ input{
 
 #stats{
     .container-fluid{
+        grid-template-columns: repeat(4,1fr);
         .card{
-            flex: 0 1 calc((100% / 4));
             padding:5rem 0rem;
             justify-content: center;
             align-items: center;  
-
+           grid-template-columns: auto 1fr;
+            
             &:before{
                     @extend %font-icon;
                     height: 50px;
@@ -303,12 +307,12 @@ input{
 
 #skills{
 
-    .flex{
+    .grid{
         justify-content: space-between;
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 3rem;
     }
     .collapsibles{
-        flex:0 1 calc((100% / 2) - 1rem);
-
         .collapsible {
             background-color: var(--color-light);
             color: var(--color-dark);
@@ -389,6 +393,7 @@ input{
                 font-size: 0.9rem;
                 &:last-child{
                     color: var(--color-main);
+                    text-align: right;
                 }
             }
         }
@@ -415,20 +420,19 @@ input{
 }
 
 #service{
-     .flex{
-         justify-content: space-between;
+     .grid{
          overflow: hidden;
+         grid-template-columns: repeat(4,1fr);
+         grid-column-gap: 2rem;
          .card{
              text-align: center;
              padding: 2rem;
-             flex: 0 1 calc((100% / 4) - 1rem);
              margin-bottom: 2rem;
              border: 1px solid lightgray;
              transition: all 1s ease-in-out;
 
              h2{
-                 font-size: 1.1rem;
-             
+                font-size: 1.1rem;
                 &:before{
                 @extend %font-icon;
                 height: 50px;
@@ -522,8 +526,7 @@ input{
     flex-direction: column;
     align-items: center;
     &:after{
-        content: '';
-    
+       content: '';
        position: absolute;
        z-index: -1;
        background:url('https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSA3FBH5EDFMeBkTGsb_TEftG-yfu_SWKlHHa4XDvir-PoLJWn6&usqp=CAU') fixed center/cover;
@@ -552,7 +555,9 @@ input{
         }
         ul{
             justify-content: center;
+            grid-template-columns: 150px 150px 150px 150px 150px;
                 li{
+                    text-align: center;
                     padding-left: 1rem;
                     padding-right: 1rem;
                     transition: color 1s ease-in-out;
@@ -565,11 +570,11 @@ input{
         }
         
         .cards{
-            justify-content: space-between;
+            grid-template-columns: repeat(3,1fr);
+            grid-column-gap: 2rem;
             .card{
                 overflow: hidden;
                 
-                flex: 0 1 calc((100% / 3) - 1rem);
                 margin-bottom: 2rem;
                 cursor: pointer;
                 position: relative;
@@ -615,8 +620,9 @@ input{
 
     .cards{
         justify-content: space-between;
+        grid-template-columns: repeat(4, 1fr);
+        grid-column-gap: 2rem;
         .card{
-            flex: 0 1 calc((100% / 4) - 1rem);
             margin-bottom: 1rem;
             text-align: center;
 
@@ -716,7 +722,12 @@ input{
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        text-align: center;
         height: 80vh;
+
+        p{
+            margin: auto;
+        }
 
         .name{
             &:before{
@@ -763,10 +774,11 @@ input{
     }
 
     .cards{
+        grid-template-columns: repeat(4,1fr);
+        grid-column-gap: 2rem;
         justify-content: space-between;
         .card{
-            flex: 0 1 calc((100% / 4) - 1rem);
-            margin-bottom: 1rem;
+            margin-bottom: 2rem;
             text-align: center;
             border: 2px solid lightgray;
             transition: all 1s ease-in-out;
@@ -797,9 +809,10 @@ input{
 
     .cards{
         justify-content: space-between;
+        grid-template-columns: repeat(3,1fr);
+        grid-column-gap: 2rem;
         .card{
-            flex: 0 1 calc((100% / 3) - 1rem);
-            margin-bottom: 1rem;
+            margin-bottom: 2rem;
             text-align: center;
 
             p:first-child{
@@ -818,8 +831,9 @@ input{
 
     .partners{
         justify-content: space-between;
+        grid-template-columns: repeat(5,1fr);
+        grid-column-gap: 2rem;
         .card{
-        flex: 0 1 calc((100% / 5) - 1rem);
         margin-bottom: 2rem;
         border: 2px solid lightgray;
         padding: 2rem;
@@ -829,9 +843,10 @@ input{
 }
 
 #newsletter{
+       .container-fluid{
+        grid-template-columns: repeat(2,1fr);}
     .card{
         align-items: center;
-        flex: 1;
 
         &:first-child{
             background: var(--color-main);
@@ -874,10 +889,11 @@ input{
         margin-bottom: 4rem;
     }
     .form{
-        .flex{
+        .grid{
             justify-content: space-between;
+            grid-template-columns: repeat(3,1fr);
+            grid-column-gap: 2rem;
             input{
-                flex: 0 1 calc((100% / 3) - 1rem);
                 width: 100%;
                 margin-bottom: 2rem;
                 border: 1px solid lightgray;
@@ -887,6 +903,7 @@ input{
             width: 100%;
             border: 1px solid lightgray;
             padding: 12px;
+            margin-bottom: 2rem;
         }
         text-align: center;
     }
@@ -981,6 +998,7 @@ input{
         .container{
             justify-content: space-between;
             align-items: center;
+            grid-template-columns: 1fr auto;
         }
     }
     #social{
@@ -989,8 +1007,15 @@ input{
 
         .container{
         justify-content: center;
-        flex-direction: column;
-        align-items: center;}
+        align-items: center;
+         .grid{
+             grid-template-columns: auto auto auto auto;
+
+             &:last-child{
+                 justify-content: space-between;
+             }
+         }
+        }
 
         .fab{
             padding: 0 1rem;

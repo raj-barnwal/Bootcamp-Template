@@ -2,6 +2,17 @@
     .text-3{
         font-size: 2rem;
     }
+    #header{
+        #brand{
+            ul{
+                grid-template-columns: repeat(1,1fr);
+                li{
+                    margin-bottom: 0.8rem;
+                }
+            }
+        }
+    }
+
 
     #slides{
         .container-fluid{
@@ -34,64 +45,54 @@
         padding-right: 1.8rem;
     }
 
-    #header{
-        li{
-            margin-bottom: 0.8rem;
-        }
-    }
+    
     
     #stats{
         .container-fluid{
-            .card{
-                flex: 100%;
-            }
+            grid-template-columns: repeat(1,1fr);
         }
         
     }
     #work {
         .container{
             .cards{
-                .card{
-                    flex: 100%;
-                }
+                grid-template-columns: repeat(1,1fr);
             }
         }
     }
     #about{
+        .container{
+            .grid{
+                grid-template-columns: repeat(1,1fr);
+            }
+        }
         .what-we-do{
-           flex: 100%;
            margin-bottom: 4rem;
            text-align: center;
         }
         .stacks{
-            flex: 100%;
-
             .card{
-                flex: 100%;
                 text-align: center;
             }
         }
     }
     #service{
-        .flex {
-            .card{
-                flex: 100%;
-            }
+        .grid {
+            grid-template-columns: repeat(1,1fr);
         }
     }
 
     #team{
         .cards{
-            .card{
-                flex: 100%;
-            }
+            grid-template-columns: repeat(1,1fr);
+
         }
     }
 
     #pricing{
         .cards{
+            grid-template-columns: repeat(1,1fr);
             .card{
-                flex: 100%;
                 margin-bottom: 2rem;
             }
         }
@@ -99,14 +100,11 @@
 
     #news{
         .cards{
-            .card{
-                flex: 100%;
-                margin-bottom: 2rem;
-            }
+            grid-template-columns: repeat(1,1fr);
         }
         .partners{
+            grid-template-columns: repeat(1,1fr);
             .card{
-                flex: 100%;
                 margin-bottom: 2rem;
             }
         }
@@ -133,8 +131,8 @@
     }
 
     #newsletter{
-        .card{
-            flex: 100%;
+        .grid{
+            grid-template-columns: repeat(1,1fr);
         }
         
     }
@@ -165,14 +163,9 @@
 
     #get-in-touch{
         .form{
-            .flex{
-                input{
-                    flex: 100%;
-                    margin-bottom: 2rem;
-                }
-            }
-            textarea{
-                margin-bottom: 2rem;
+            .grid{
+            grid-template-columns: repeat(1,1fr);
+            
             }
         }
     }
@@ -185,10 +178,12 @@
 @media (max-width: 767.98px) { 
      #header{
          #brand{
+             grid-template-columns: repeat(1,1fr);
              flex-direction: column;
              padding: 1rem 0;
              h2{
                  margin-bottom: 1rem;
+                 text-align: center;
              }
          }
          #links{
@@ -198,21 +193,21 @@
          }
      }
      #skills {
+         .container{
+         & >.grid{
+            grid-template-columns: repeat(1,1fr);
+         }
         .collapsibles{
-          flex: 100%;
           margin-bottom: 4rem;
         }
-        .progress{
-            flex: 100%;
         }
+        
     }
 
     #work {
         .container{
             .cards{
-                .card{
-                    flex: 0 1 calc((100% / 2) - 1rem);
-                }
+            grid-template-columns: repeat(2,1fr);
             }
         }
     }
@@ -221,8 +216,13 @@
 // Medium devices (tablets, less than 992px)
 @media (min-width:576px) and (max-width: 991.98px) { 
     #about{
-        .what-we-do{
-           flex: 100%;
+        .container{
+            &>.grid{
+                grid-template-columns: repeat(1,1fr);
+
+            }
+        }
+        .what-we-do{  
            margin-bottom: 4rem;
            text-align: center;
         }
@@ -232,8 +232,9 @@
     }
     #stats{
         .container-fluid{
+            grid-template-columns: repeat(2,1fr);
+
             .card{
-                flex: 0 1 calc((100% / 2) );
 
                 &:nth-child(3){
                    background-color: #dbdbdb;
@@ -245,25 +246,23 @@
         }
     }
     #service{
-        .flex {
-            .card{
-                flex: 0 1 calc((100% / 2) - 1rem);
-            }
+        .grid {
+            grid-template-columns: repeat(2,1fr);
+
         }
     }
 
     #team{
         .cards{
-            .card{
-                flex: 0 1 calc((100% / 2) - 1rem);
-            }
+            grid-template-columns: repeat(2,1fr);
+            
         }
     }
 
     #pricing{
         .cards{
+         grid-template-columns: repeat(2,1fr);
             .card{
-                flex: 0 1 calc((100% / 2) - 1rem);
                 margin-bottom: 2rem;
             }
         }
@@ -271,21 +270,16 @@
 
     #news{
         .cards{
+         grid-template-columns: repeat(2,1fr);
             .card{
-                flex: 0 1 calc((100% / 2) - 1rem);
                 margin-bottom: 2rem;
             }
         }
         .partners{
+             grid-template-columns: repeat(3,1fr);
             .card{
-                flex: 0 1 calc((100% / 2) - 1rem);
                 margin-bottom: 2rem;
             }
         }
     }
- }
-
-// Large devices (desktops, less than 1200px)
-@media (max-width: 1199.98px) { 
-
  }
