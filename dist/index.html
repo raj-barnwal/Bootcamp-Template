@@ -20,14 +20,14 @@
                     <li>
                         <div class="text">
                             <p>Email</p>
-                            <p>info@email.com</p>
+                            <p class="text-bold">info@email.com</p>
                         </div>
 
                     </li>
                     <li>
                         <div class="text">
                             <p>Phone</p>
-                            <p>123 456 7890</p>
+                            <p class="text-bold">123 456 7890</p>
                         </div>
                     </li>
                 </ul>
@@ -477,7 +477,6 @@
 
                     <p class="text-1 width-50 my-2 translateXright"> Lorem ipsum, dolor sit amet consectetur adipisicing
                         elit. Debitis
-                        suscipit, repudiandae porro enim veritatis aut tenetur cumque natus maiores soluta!
                         <p>
                             <div>
                                 <span class="dot" onclick="currentSlide(1)"></span>
@@ -496,7 +495,6 @@
 
                     <p class="text-1 width-50 my-2 translateXright"> Lorem ipsum, dolor sit amet consectetur adipisicing
                         elit. Debitis
-                        suscipit, repudiandae porro enim veritatis aut tenetur cumque natus maiores soluta!
                         <p>
                             <div>
                                 <span class="dot" onclick="currentSlide(1)"></span>
@@ -514,9 +512,7 @@
                     <p class="color-main text-1 translateX">Director</p>
 
                     <p class="text-1 width-50 my-2 translateXright"> Lorem ipsum, dolor sit amet consectetur adipisicing
-                        elit. Debitis
-                        suscipit, repudiandae porro enim veritatis aut tenetur cumque natus maiores soluta!
-                        <p>
+                        elit. Debitis <p>
                             <div>
                                 <span class="dot" onclick="currentSlide(1)"></span>
                                 <span class="dot" onclick="currentSlide(2)"></span>
@@ -533,8 +529,7 @@
             <h3 class="text-2 text-center translateY">PRICING <span class="color-main">TABLE</span></h3>
             <div class="divider fade"></div>
             <p class="lead width-50 text-center translateX">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, ratione tempora dolorum est tenetur
-                impedit ab eos esse reprehenderit sit?
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, ratione tempora dolorum
             </p>
 
             <div class="flex cards translateXright">
@@ -694,7 +689,7 @@
                 </p>
             </div>
             <div class="card flex py-4 translateXright">
-                <input type="text" placeholder="Email Address">
+                <input type="text" placeholder="Email Address" required>
                 <button><i class="fas fa-paper-plane"></i></button>
             </div>
         </div>
@@ -711,11 +706,11 @@
 
             <div class="form translateXright">
                 <div class="flex my-1">
-                    <input type="text" placeholder="Full Name">
-                    <input type="text" placeholder="Email Address">
-                    <input type="text" placeholder="Subject">
+                    <input type="text" placeholder="Full Name" required>
+                    <input type="email" placeholder="Email Address" required>
+                    <input type="text" placeholder="Subject" required>
                 </div>
-                <textarea placeholder="Your Comment" cols="30" rows="5"></textarea>
+                <textarea placeholder="Your Comment" cols="30" rows="5" required></textarea>
                 <button class="btn btn-main my-1">SEND MESSAGE</button>
             </div>
         </div>

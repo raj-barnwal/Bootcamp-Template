@@ -16,7 +16,16 @@
 
     #testimonials{
         .my-2{
-            margin: 0.8rem 0;
+            margin: 0.4rem 0;
+        }
+        .container-fluid{
+            .content{
+                .name{
+                    &:before{
+                        margin: 0 auto;
+                    }
+                }
+            }
         }
     }
 
