@@ -1,0 +1,42 @@
+:root {
+    --primary-color: #2e7db4;
+    --dark-color: #141414;
+    --light-color: #fff;
+    --primary-dark: #1E5175;
+    --medium-color: #e6e6e6;
+    --medium-light: #f0f0f0;
+    --medium-dark: #292a2c;
+}
+
+@mixin flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin controls-flex {
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+// KEYFRAMES
+@keyframes slide-in-from-top {
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slide-in-from-left {
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
