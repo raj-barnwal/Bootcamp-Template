@@ -1,0 +1,12 @@
+$text-color: #5391c2;
+$primary-color: #347ab6;
+$light-color: #fff;
+$font-stack: "Jost", sans-serif;
+
+%button-shared {
+  padding: 0.5rem 0.7rem;
+  cursor: pointer;
+  background: transparent;
+  color: #fff;
+  border: solid 1px #fff;
+}
