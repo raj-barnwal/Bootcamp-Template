@@ -1,0 +1,113 @@
+@media (max-width: 575.98px) {
+  .top-nav {
+    flex-direction: column;
+  }
+  .contact-inf {
+    flex-direction: column;
+  }
+
+  .secondary-nav-content {
+    flex-direction: column;
+    padding-left: 6rem;
+  }
+  .header-content {
+    .banner-text {
+      font-size: 1rem;
+      + .about {
+        width: 100%;
+        padding: 1rem;
+      }
+    }
+    .btn {
+      margin-bottom: 1rem;
+    }
+  }
+  .about-us {
+    &-content,
+    &-work {
+      flex-direction: column;
+    }
+
+    .what-we-do {
+      width: 100%;
+    }
+  }
+
+  .works-done {
+    .cards {
+      flex-direction: column;
+    }
+  }
+
+  .wrapper-skills {
+    flex-direction: column;
+    .skills-card {
+      width: 100%;
+    }
+    .progress-card {
+      width: 100%;
+    }
+  }
+  .services {
+    .services-cards {
+      flex-direction: column;
+    }
+    .card {
+      width: 100%;
+    }
+  }
+
+  .work-image {
+    .image {
+      height: 200px;
+      width: 200px;
+    }
+    .top-img {
+      margin-left: 0;
+    }
+  }
+
+  .members {
+    flex-direction: column;
+  }
+  .members {
+    .user-image {
+      width: 170px;
+    }
+  }
+  .price-card,
+  .news-card {
+    flex-direction: column;
+  }
+  .news-card {
+    .card {
+      width: 100%;
+      padding: 1rem;
+      .image {
+        width: 270px;
+      }
+      .btn {
+        margin-left: 0;
+      }
+    }
+  }
+
+  .news-logos {
+    flex-direction: column;
+  }
+
+  .wrapper-newsletter {
+    flex-direction: column;
+
+    .news-letter {
+      width: 100%;
+    }
+    .email {
+      width: 100%;
+    }
+  }
+
+  .input {
+    margin: 10px;
+  }
+}
