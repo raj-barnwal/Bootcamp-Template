@@ -12,7 +12,7 @@
 
 </head>
 
-<body>
+<body onload="init();">
     <header id="home">
 
         <nav class="navigation">
@@ -384,10 +384,9 @@
                     <p>Worker</p>
                 </li>
             </ul>
-            <div class="clients">
-                <!-- <input type="radio" id="trigger1">
-                <label for="trigger1"></label> -->
-                <div class="clients-1 slide">
+            <div class="clients slides">
+
+                <div class="clients-1 slide" id="slide-1">
                     <div class="clients-content container">
                         <h3 class="matter-heading-large lead-large">Happy clients</h3>
                         <i class="las la-comment-dots la-3x icons-white lead"></i>
@@ -396,28 +395,31 @@
                         <p class="lead">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora eaque minima voluptates sit id atque nisi explicabo! Repudiandae at doloribus deleniti aut, praesentium incidunt! Rerum!</p>
                     </div>
                 </div>
-                <!-- <input type="radio" id="trigger2">
-                <label for="trigger2"></label>
-                <div class="clients-2 slide">
+
+                <div class="clients-2 slide" id="slide-2">
                     <div class="clients-content container">
                         <h3 class="matter-heading-large lead-large">Happy clients</h3>
                         <i class="las la-comment-dots la-3x icons-white lead"></i>
-                        <h4 class="matter-heading-small lead">neil craft</h4>
-                        <span class="lead">Director</span>
+                        <h4 class="matter-heading-small lead">Michael Mando</h4>
+                        <span class="lead">Artist</span>
                         <p class="lead">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora eaque minima voluptates sit id atque nisi explicabo! Repudiandae at doloribus deleniti aut, praesentium incidunt! Rerum!</p>
                     </div>
                 </div>
-                <input type="radio">
-                <label for="trigger3"></label>
-                <div class="clients-3 slide" id="trigger3">
+
+                <div class="clients-3 slide" id="slide-3">
                     <div class="clients-content container">
                         <h3 class="matter-heading-large lead-large">Happy clients</h3>
                         <i class="las la-comment-dots la-3x icons-white lead"></i>
-                        <h4 class="matter-heading-small lead">neil craft</h4>
-                        <span class="lead">Director</span>
+                        <h4 class="matter-heading-small lead">Jay Beans</h4>
+                        <span class="lead">CEO</span>
                         <p class="lead">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora eaque minima voluptates sit id atque nisi explicabo! Repudiandae at doloribus deleniti aut, praesentium incidunt! Rerum!</p>
                     </div>
-                </div> -->
+                </div>
+            </div>
+            <div class="slider-nav">
+                <a href="#slide-1"></a>
+                <a href="#slide-2"></a>
+                <a href="#slide-3"></a>
             </div>
         </div>
     </section>
@@ -545,6 +547,8 @@
                 <a class="btn btn-primary" onclick='return validateForm()'>send message</a>
             </form>
             <div class="bottom-banner">
+                <div id="basicMap">
+                </div>
                 <div class="container">
                     <div class="content">
                         <h3><span>Biz care</span> is the perfect template for your next project</h3>
@@ -570,7 +574,7 @@
             </div>
         </div>
     </footer>
-
+    <script src="./js/OpenLayers.js"></script>
     <script src="./js/script.js"></script>
 </body>
 

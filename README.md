@@ -1,4 +1,4 @@
 Things to do - 
 - add more animation
-- open street maps
-- image slider
+- open street maps //(done)
+- image slider  //(done)
