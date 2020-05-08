@@ -537,7 +537,7 @@ h3 {
     display: block;
   }
 
-  &-input:checked ~ .accordion-label::after {
+  &-input:checked ~ .accordion-label:after {
     transform: translateY(-50%) rotate(0.5turn);
   }
 }
