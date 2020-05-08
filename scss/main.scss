@@ -828,67 +828,66 @@ h2 {
     }
   }
 }
-.contact {
-  margin: 0px;
-  padding: 0px;
-  display: flex;
+// .contact {
+//   position: relative;
+//   margin: 0px;
+//   padding: 0px;
+//   display: flex;
+//   flex-direction: column;
+//   width: 100%;
+//   height: auto;
+//   background-color: lightskyblue;
+//   font-family: "Jost", sans-serif;
+// }
+// .contact-card {
+//   display: flex;
+//   flex-direction: row;
+//   align-items: center;
+//   color: rgba(250, 250, 250, 1);
+// }
 
-  position: relative;
-  flex-direction: column;
-  width: 100%;
-  height: auto;
-  background-color: lightskyblue;
-  font-family: "Jost", sans-serif;
-}
-.contact-card {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  color: rgba(250, 250, 250, 1);
-}
-.contact iframe {
-  width: 100%;
-  height: 400px;
-}
-.contact-info {
-  position: absolute;
-  top: 0px;
-  left: 15%;
-  height: inherit;
-  padding: 16px;
-  border: 1px solid rgba(250, 250, 250, 1);
-  background-color: lightskyblue;
-}
-.contact-card h2 {
-  font-size: 18px;
-  color: rgba(25, 25, 25, 1);
-}
+// .contact iframe {
+//   width: 100%;
+//   height: 400px;
+// }
+// .contact-info {
+//   position: absolute;
+//   top: 0px;
+//   left: 15%;
+//   height: inherit;
+//   padding: 16px;
+//   border: 1px solid rgba(250, 250, 250, 1);
+//   background-color: lightskyblue;
+// }
+// .contact-card h2 {
+//   font-size: 18px;
+//   color: rgba(25, 25, 25, 1);
+// }
 
-.contact i {
-  font-size: 45px;
-  margin: 20px;
-}
+// .contact i {
+//   font-size: 45px;
+//   margin: 20px;
+// }
 
-.contact-footer {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: space-around;
-  justify-content: space-around;
-  align-items: center;
-  text-align: center;
-  color: rgba(250, 250, 250, 1);
-}
+// .contact-footer {
+//   display: flex;
+//   flex-direction: row;
+//   flex-wrap: space-around;
+//   justify-content: space-around;
+//   align-items: center;
+//   text-align: center;
+//   color: rgba(250, 250, 250, 1);
+// }
 
-.contact-footer button {
-  border: 0px;
-  background-color: rgba(250, 250, 250, 1);
-  color: lightskyblue;
-  padding: 5px 15px;
-}
-.contact-footer button h4 {
-  margin: 0px;
-}
-
+// .contact-footer button {
+//   border: 0px;
+//   background-color: rgba(250, 250, 250, 1);
+//   color: lightskyblue;
+//   padding: 5px 15px;
+// }
+// .contact-footer button h4 {
+//   margin: 0px;
+// }
 footer {
   margin: 0px;
   width: 100%;

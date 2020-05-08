@@ -637,62 +637,6 @@ h2 + p {
         .wrapper-get-it-us .bottom-banner .content h3 span {
           text-transform: uppercase; }
 
-.contact {
-  margin: 0px;
-  padding: 0px;
-  display: flex;
-  position: relative;
-  flex-direction: column;
-  width: 100%;
-  height: auto;
-  background-color: lightskyblue;
-  font-family: "Jost", sans-serif; }
-
-.contact-card {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  color: #fafafa; }
-
-.contact iframe {
-  width: 100%;
-  height: 400px; }
-
-.contact-info {
-  position: absolute;
-  top: 0px;
-  left: 15%;
-  height: inherit;
-  padding: 16px;
-  border: 1px solid #fafafa;
-  background-color: lightskyblue; }
-
-.contact-card h2 {
-  font-size: 18px;
-  color: #191919; }
-
-.contact i {
-  font-size: 45px;
-  margin: 20px; }
-
-.contact-footer {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: space-around;
-  justify-content: space-around;
-  align-items: center;
-  text-align: center;
-  color: #fafafa; }
-
-.contact-footer button {
-  border: 0px;
-  background-color: #fafafa;
-  color: lightskyblue;
-  padding: 5px 15px; }
-
-.contact-footer button h4 {
-  margin: 0px; }
-
 footer {
   margin: 0px;
   width: 100%;
@@ -767,4 +711,22 @@ footer {
     .wrapper-newsletter .email {
       width: 100%; }
   .input {
-    margin: 10px; } }
+    margin: 10px; }
+  .contact {
+    display: none; } }
+
+@media (max-width: 1024px) {
+  .members {
+    flex-direction: column; }
+  .news-card .card {
+    margin: 1rem; }
+    .news-card .card .image {
+      height: 150px;
+      width: 150px; }
+    .news-card .card .btn {
+      margin-left: 0; }
+  .contact {
+    display: none; }
+  .news-logos .image {
+    height: 70px;
+    width: 110px; } }

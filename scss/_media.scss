@@ -110,4 +110,38 @@
   .input {
     margin: 10px;
   }
+
+  .contact {
+    display: none;
+  }
+}
+
+@media (max-width: 1024px) {
+  .members {
+    flex-direction: column;
+  }
+  .news-card {
+    .card {
+      margin: 1rem;
+
+      .image {
+        height: 150px;
+        width: 150px;
+      }
+
+      .btn {
+        margin-left: 0;
+      }
+    }
+  }
+  .contact {
+    display: none;
+  }
+
+  .news-logos {
+    .image {
+      height: 70px;
+      width: 110px;
+    }
+  }
 }
