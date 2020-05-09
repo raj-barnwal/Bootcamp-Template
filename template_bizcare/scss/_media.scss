@@ -1,0 +1,519 @@
+@media (max-width: 1024px) {
+  .lead {
+    margin: 1rem 15rem;
+  }
+  header {
+    #header {
+      margin: 1rem 0;
+    }
+  }
+  .showcase {
+    .container {
+      height: 60vh;
+      h1 {
+        margin-top: 20rem;
+      }
+      p {
+        margin: 0 18rem;
+      }
+      .showcase-btn {
+        margin-bottom: 15rem;
+      }
+    }
+  }
+
+  .section {
+    &-a {
+      .container {
+        h1:after {
+          left: 27rem;
+        }
+      }
+    }
+    &-c {
+      h3 + div {
+        margin: 1rem;
+        padding: 1rem;
+      }
+    }
+    &-d {
+      .container {
+        .service-cards {
+          padding: 1rem 2rem;
+          margin: 0;
+        }
+        h1:after {
+          left: 26rem;
+        }
+      }
+    }
+    &-e {
+      .container {
+        .works-image {
+          padding: 0 2rem;
+        }
+        h1:after {
+          left: 26rem;
+        }
+      }
+    }
+    &-f {
+      .container {
+        .team {
+          padding: 0 2rem 3rem 2rem;
+        }
+        h1:after {
+          left: 26rem;
+        }
+      }
+    }
+    &-h {
+      .container {
+        .price {
+          padding: 1rem 3rem;
+          grid-gap: 1rem;
+        }
+        h1:after {
+          left: 26rem;
+        }
+      }
+    }
+    &-i {
+      .container {
+        &-news {
+          padding: 1rem 3rem;
+        }
+        .companies {
+          padding: 0 1rem;
+          &-name {
+            padding: 1rem 1.2rem;
+          }
+        }
+        h1:after {
+          left: 26rem;
+        }
+      }
+    }
+    &-k {
+      .container {
+        form {
+          .signup-data,
+          .message {
+            padding: 1rem 3rem;
+          }
+          .message {
+            textarea {
+              width: 100%;
+              min-width: 750px;
+            }
+          }
+        }
+        h1:after {
+          left: 27rem;
+        }
+      }
+    }
+    &-video {
+      .video {
+        .overlay {
+          .fas {
+            margin: 2rem 28rem;
+          }
+        }
+      }
+    }
+    &-map {
+      .map-address {
+        width: 25%;
+      }
+    }
+    &-last {
+      .container {
+        grid-template-columns: 4fr 1fr;
+        h3 {
+          padding: 0 5rem;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .lead {
+    margin: 1rem 10rem;
+  }
+
+  header {
+    #header {
+      grid-template-columns: repeat(2, 1fr);
+      .header-right-info {
+        margin: 0 0.5rem;
+      }
+    }
+  }
+  .header-nav {
+    .navbar {
+      ul {
+        li {
+          margin: 0 1rem;
+        }
+      }
+    }
+  }
+  .showcase {
+    .container {
+      h1 {
+        margin-top: 10rem;
+      }
+      p {
+        color: #333;
+        margin: 0 10rem;
+      }
+      .showcase-btn {
+        margin-bottom: 15rem;
+      }
+    }
+  }
+  .section {
+    &-a {
+      .container {
+        .about {
+          padding: 1rem 2rem;
+
+          .about-right {
+            grid-gap: 1rem;
+            margin-left: 2rem;
+          }
+        }
+        h1:after {
+          left: 19rem;
+        }
+      }
+    }
+    &-d {
+      .container {
+        .service-cards {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        h1:after {
+          left: 18rem;
+        }
+      }
+    }
+    &-e {
+      .container {
+        h1:after {
+          left: 18rem;
+        }
+      }
+    }
+    &-f {
+      .container {
+        h1:after {
+          left: 18rem;
+        }
+      }
+    }
+    &-video {
+      .video {
+        .overlay {
+          .fas {
+            margin: 2rem 20.2rem;
+          }
+        }
+      }
+    }
+    &-g {
+      .overlay-text {
+        margin: 0 5rem;
+      }
+    }
+    &-h {
+      .container {
+        .price {
+          grid-template-columns: repeat(2, 1fr);
+          grid-gap: 1rem;
+        }
+        h1:after {
+          left: 18rem;
+        }
+      }
+    }
+    &-i {
+      .container {
+        .container-news {
+          padding: 2rem 3rem;
+        }
+        .companies {
+          grid-template-columns: repeat(1, 1fr);
+          padding: 0 10rem;
+        }
+        h1:after {
+          left: 18rem;
+        }
+      }
+    }
+    &-k {
+      .container {
+        form {
+          .signup-data,
+          .message {
+            padding: 1rem 2rem;
+          }
+          .message {
+            textarea {
+              width: 100%;
+              min-width: 650px;
+            }
+          }
+        }
+        h1:after {
+          left: 19rem;
+        }
+      }
+    }
+    &-map {
+      .map-address {
+        width: 30%;
+      }
+    }
+    &-last {
+      .container {
+        h3 {
+          padding: 0 4rem;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .lead {
+    margin: 1rem 2rem;
+  }
+  header {
+    #header {
+      grid-template-columns: 1fr;
+      .logo {
+        text-align: center;
+      }
+    }
+  }
+  .header-nav {
+    .navbar {
+      ul {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 0.5rem;
+        li {
+          margin: 0 0.9rem;
+        }
+      }
+    }
+  }
+  .showcase {
+    .container {
+      h1 {
+        margin-top: 5rem;
+        font-size: 2rem;
+      }
+      p {
+        margin: 0 2rem 2rem 2rem;
+      }
+      .showcase-btn {
+        margin-bottom: 10rem;
+      }
+    }
+  }
+  .section {
+    &-a {
+      .container {
+        h1:after {
+          left: 7rem;
+        }
+        .about {
+          grid-template-columns: 1fr;
+          .about-right {
+            margin-left: 0;
+          }
+        }
+      }
+    }
+    &-b {
+      grid-template-columns: 1fr;
+      .card {
+        height: 120px;
+      }
+    }
+    &-c {
+      .container {
+        h3 + div {
+          grid-template-columns: 1fr;
+          grid-gap: 2rem;
+        }
+        .open-box .box label {
+          width: auto;
+        }
+      }
+    }
+    &-d {
+      .container {
+        .service-cards {
+          grid-template-columns: 1fr;
+        }
+        h1:after {
+          left: 6rem;
+        }
+      }
+    }
+    &-video {
+      display: none;
+    }
+    &-e {
+      .container {
+        .work-list {
+          ul {
+            display: grid;
+          }
+        }
+        .works-image {
+          grid-template-columns: repeat(2, 1fr);
+          padding: 0;
+          &-overlay {
+            margin: 0.5rem;
+          }
+        }
+        h1:after {
+          left: 6rem;
+        }
+      }
+    }
+    &-f {
+      .container {
+        h1:after {
+          left: 6rem;
+        }
+        .team {
+          grid-template-columns: repeat(2, 1fr);
+          grid-gap: 1rem;
+          padding: 0 0 2rem 0;
+          &-members {
+            img {
+              margin: 0;
+            }
+          }
+        }
+      }
+    }
+    &-g {
+      .overlay-text {
+        margin: 0 1rem;
+      }
+    }
+    &-h {
+      .container {
+        h1 {
+          padding: 0 5rem;
+          &:after {
+            left: 6rem;
+          }
+        }
+        .price {
+          grid-template-columns: 1fr;
+          grid-gap: 1.5rem;
+          padding: 1rem;
+          &-cards {
+            padding: 1rem;
+          }
+        }
+      }
+    }
+    &-i {
+      .container {
+        h1 {
+          padding: 0 3rem;
+          &:after {
+            left: 6rem;
+          }
+        }
+        .container-news {
+          grid-template-columns: 1fr;
+          grid-gap: 1rem;
+          padding: 1rem;
+          .first-news {
+            p {
+              margin-bottom: 1rem;
+            }
+          }
+        }
+        .companies {
+          padding: 0 4rem;
+          margin: 1rem 0;
+        }
+      }
+    }
+    &-j {
+      grid-template-columns: 1fr;
+      .signup {
+        padding: 2rem;
+      }
+      .signup-email {
+        padding: 2rem;
+        input {
+          width: 100%;
+        }
+      }
+    }
+    &-k {
+      .container {
+        h1 {
+          padding: 0 3rem;
+          &:after {
+            left: 7rem;
+          }
+        }
+        form {
+          .signup-data {
+            padding: 0;
+            grid-template-columns: 1fr;
+            input {
+              margin: 0 1rem;
+            }
+          }
+          .message {
+            padding: 0;
+            textarea {
+              min-width: 315px;
+              max-width: 315px;
+
+              min-height: 120px;
+              max-height: 120px;
+            }
+          }
+        }
+      }
+    }
+    &-map {
+      .map-address {
+        width: 65%;
+        left: 3rem;
+      }
+    }
+    &-last {
+      .container {
+        grid-template-columns: 1fr;
+        padding: 1rem;
+        h3 {
+          padding: 1rem;
+        }
+      }
+    }
+  }
+  footer {
+    .container {
+      h2 {
+        font-size: 1rem;
+      }
+    }
+  }
+}
