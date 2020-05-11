@@ -63,9 +63,8 @@ h3 {
 
 .header {
   padding: 14px 8rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   animation: 1.5s ease-out 0s 1 slideInFromTop; }
 
 @keyframes slideInFromTop {
@@ -83,6 +82,7 @@ h3 {
     color: var(--primary-color);
     margin-left: 0.5rem; }
   .header-content {
+    margin-left: 12rem;
     display: flex; }
     .header-content > div {
       display: flex;
@@ -236,16 +236,17 @@ h3 {
 
 .container-au {
   overflow: hidden;
-  position: relative; }
+  position: relative;
+  padding-left: 5rem; }
   .container-au p {
     font-size: 12px;
     color: #b3b3b3; }
 
 .container-au-content {
-  display: flex;
-  justify-content: space-between; }
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); }
   .container-au-content-left, .container-au-content-middle, .container-au-content-right {
-    width: 30%; }
+    width: 70%; }
     .container-au-content-left span, .container-au-content-middle span, .container-au-content-right span {
       color: var(--primary-color); }
     .container-au-content-left p, .container-au-content-middle p, .container-au-content-right p {
@@ -254,11 +255,12 @@ h3 {
       margin-top: 10px; }
 
 .wrapper-cards {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   width: 100%; }
 
 .cards {
-  width: 25%;
+  width: 100%;
   height: 12rem;
   display: flex;
   align-items: center;
@@ -300,16 +302,23 @@ h3 {
   margin-bottom: 3rem; }
 
 .container-wswh-content {
-  display: flex;
-  justify-content: space-between; }
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); }
 
 .accordion {
-  width: 45%;
+  width: 80%;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   overflow: hidden;
   background: var(--primary-color);
   border-radius: 5px;
-  border: 1px solid var(--primary-color); }
+  border: 1px solid var(--primary-color);
+  animation: 1.2s ease-out 0s 1 slideInFromLeft; }
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%); }
+  100% {
+    transform: translateX(0); } }
   .accordion-label, .accordion-content {
     padding: 14px 20px; }
   .accordion-label {
@@ -345,7 +354,14 @@ h3 {
     transform: translateY(-50%) rotate(0.5turn); }
 
 .skills {
-  width: 45%; }
+  width: 80%;
+  animation: 1.2s ease-out 0s 1 slideInFromRight; }
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%); }
+  100% {
+    transform: translateX(0); } }
   .skills h5 {
     display: flex;
     justify-content: space-between;
@@ -380,7 +396,7 @@ h3 {
       animation: slide 2s; }
 
 @keyframes slide {
-  0% {
+  50% {
     width: 0; } }
 
 .container-swp .toggle {
@@ -448,8 +464,8 @@ h3 {
         cursor: pointer; }
 
 .container-ogw-content {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   margin-left: 45px; }
 
 .box1 {
@@ -458,7 +474,7 @@ h3 {
   width: 300px;
   height: 300px; }
   .box1:hover .overlay {
-    opacity: 1; }
+    opacity: 0.7; }
 
 .overlay {
   background: var(--primary-color);
@@ -480,10 +496,11 @@ h3 {
   width: 200px;
   height: 200px; }
   .box2:hover .overlay {
-    opacity: 1; }
+    opacity: 0.7; }
 
 .container-ctm-content {
-  display: flex; }
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); }
   .container-ctm-content .wrapper-box {
     margin: 10px; }
     .container-ctm-content .wrapper-box h5,
