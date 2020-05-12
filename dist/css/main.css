@@ -1,0 +1,178 @@
+:root {
+  --bg-color: #f3f3f3;
+  --light-color: #a1a2a7;
+  --dark-color: #474954;
+  --green-color: #66d285; }
+
+.lead {
+  margin-bottom: 2rem; }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.6rem; }
+
+li {
+  list-style: none; }
+
+a {
+  text-decoration: none; }
+
+p {
+  color: var(--dark-color);
+  line-height: 1.5; }
+
+h1,
+h2,
+h3,
+h4 {
+  text-transform: uppercase;
+  color: var(--dark-color); }
+
+.container {
+  max-width: 1280px;
+  padding: 0 2rem;
+  margin: 0 auto; }
+
+#order {
+  background-color: var(--bg-color); }
+  #order .order-id {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 4rem; }
+  #order .order-status {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+  #order .address .details {
+    background-color: #fff;
+    padding: 1rem;
+    line-height: 1.5; }
+  #order .delivery-status {
+    background-color: #fff;
+    padding: 1rem; }
+    #order .delivery-status .shipment {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 0.1rem solid var(--light-color); }
+      #order .delivery-status .shipment div {
+        display: inline; }
+  #order .progress {
+    border-bottom: 0.1rem solid var(--light-color); }
+    #order .progress .status {
+      display: flex;
+      justify-content: space-between;
+      align-items: center; }
+      #order .progress .status h3 {
+        color: var(--green-color); }
+    #order .progress-bar li {
+      position: relative;
+      margin-bottom: 2rem; }
+      #order .progress-bar li:before {
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        font-size: 2rem;
+        content: "\f0da";
+        color: var(--dark-color);
+        margin-right: 2rem;
+        margin-left: 0.2rem;
+        z-index: 2; }
+      #order .progress-bar li:after {
+        content: '';
+        position: absolute;
+        width: 0.3rem;
+        left: 0;
+        top: -120%;
+        height: 0;
+        background-color: var(--dark-color);
+        z-index: 0;
+        animation: progresser 0.5s ease forwards; }
+      #order .progress-bar li:first-child:after {
+        content: none; }
+      #order .progress-bar li:nth-child(2):after {
+        top: -167%;
+        height: 0;
+        animation: progresser2 0.5s ease 0.5s forwards; }
+      #order .progress-bar li:nth-child(3):after {
+        animation: progresser 0.5s ease 1s forwards; }
+      #order .progress-bar li:nth-child(4):after {
+        animation: progresser 0.5s ease 1.5s forwards; }
+      #order .progress-bar li.active {
+        font-weight: 700; }
+        #order .progress-bar li.active:before {
+          color: var(--green-color); }
+        #order .progress-bar li.active:after {
+          background-color: var(--green-color); }
+  #order .items {
+    border-bottom: 0.1rem solid var(--light-color);
+    padding: 1rem 0; }
+  #order .list-1 .about {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 2rem;
+    border-bottom: 0.1rem solid var(--light-color); }
+    #order .list-1 .about img {
+      width: 5rem; }
+    #order .list-1 .about > div {
+      width: calc(100% - 7rem); }
+      #order .list-1 .about > div > p {
+        font-weight: 600; }
+      #order .list-1 .about > div > div {
+        display: flex;
+        justify-content: space-between;
+        align-items: center; }
+  #order .list-1 .rating {
+    direction: rtl;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 2rem;
+    position: relative;
+    border-bottom: 0.1rem solid var(--light-color); }
+    #order .list-1 .rating p {
+      order: 1;
+      margin-right: 1rem;
+      font-size: 1rem; }
+    #order .list-1 .rating > span {
+      border: none;
+      font-size: 2rem;
+      color: var(--light-color); }
+      #order .list-1 .rating > span:hover:before,
+      #order .list-1 .rating > span:hover ~ span:before {
+        content: "\2605";
+        position: absolute;
+        color: var(--green-color); }
+    #order .list-1 .rating input {
+      transform: translateX(-1.5rem);
+      opacity: 0;
+      z-index: 2; }
+      #order .list-1 .rating input:checked + span:before,
+      #order .list-1 .rating input:checked + span ~ span:before, #order .list-1 .rating input:hover + span:before,
+      #order .list-1 .rating input:hover + span ~ span:before {
+        content: "\2605";
+        position: absolute;
+        color: var(--green-color); }
+    #order .list-1 .rating #1,
+    #order .list-1 .rating #2,
+    #order .list-1 .rating #3,
+    #order .list-1 .rating #4,
+    #order .list-1 .rating #5 {
+      opacity: 0; }
+
+@keyframes progresser {
+  to {
+    height: 4.4rem; } }
+
+@keyframes progresser2 {
+  to {
+    height: 5.5rem; } }

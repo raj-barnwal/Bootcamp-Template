@@ -1,0 +1,20 @@
+:root {
+    --bg-color: #f3f3f3;
+    --light-color: #a1a2a7;
+    --dark-color: #474954;
+    --green-color: #66d285;
+}
+
+.lead {
+    margin-bottom: 2rem;
+}
+
+@mixin flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin bottom-line {
+    border-bottom: 0.1rem solid var(--light-color);
+}
