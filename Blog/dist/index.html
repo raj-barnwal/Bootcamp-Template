@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/main.css" />
+    <title>PRACTICE</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="container">
+        <section class="details">
+          <div class="box">
+            <div class="overlay">
+              <span class="overlay-content"><a href="#">EDIT</a></span>
+            </div>
+          </div>
+          <form action="#" class="clearfix">
+            <div class="input-field">
+              <input type="text" id="name" required />
+              <label for="name">Full Name</label>
+            </div>
+            <div class="input-field">
+              <input type="number" id="pno" required />
+              <label for="pno">Phone Number</label>
+            </div>
+            <div class="input-field">
+              <input type="email" id="email" required />
+              <label for="email">E-mail Address</label>
+            </div>
+            <div class="input-field">
+              <input type="text" id="dob" required />
+              <label for="dob">Date of Birth</label>
+            </div>
+            <div class="input-field">
+              <input type="password" id="pswd" required />
+              <label for="pswd">Password</label>
+            </div>
+            <div class="gender">
+              <label for="gender">Gender:</label>
+              <div class="wrapper-btn">
+                <input
+                  type="radio"
+                  id="male"
+                  name="gender"
+                  class="toggler"
+                  checked
+                />
+                <span class="btn"><i class="fas fa-mars"></i>Male</span>
+              </div>
+              <div class="wrapper-btn">
+                <input type="radio" id="female" name="gender" class="toggler" />
+                <span class="btn"><i class="fas fa-venus"></i>Female</span>
+              </div>
+            </div>
+            <button onsubmit="">UPDATE DETAILS</button>
+          </form>
+        </section>
+        <section class="order">
+          <h4><span>ORDER#123456789</span><span>Total$1279.60</span></h4>
+          <p class="order-p">
+            <span>Order Placed</span><span>Payment Method</span>
+          </p>
+          <h5><span>Mon, 6 Nov</span><span>C.O.D.</span></h5>
+          <h3>SHIPPING ADDRESS</h3>
+          <div class="address">
+            <h5>Puneet Bhadrecha</h5>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+            <p>Lorem ipsum dolor sit amet consectetur.</p>
+            <p>Mumbai - 400013</p>
+            <h5>+91-7700038969</h5>
+          </div>
+          <div class="shipment">
+            <h5><span>SHIPMENT 1 of 1</span><span>Paid In Cash $1234</span></h5>
+          </div>
+
+          <div class="delivery">
+            <h4><span>DELIVERED</span><span>Friday 11/11/2017</span></h4>
+            <div class="order-status delivered">
+              <!--confirmed,ready,shipped,delivered-->
+              <div class="progress-bar-wrapper">
+                <div class="progress-bar">
+                  <div class="bar-background">
+                    <div class="bar"></div>
+                  </div>
+                </div>
+                <div class="status">
+                  <div>
+                    <span class="stage-name">Order Confirmed</span
+                    ><span class="on-date">12/10/2019</span>
+                  </div>
+                  <div>
+                    <span class="stage-name">Ready To Ship</span
+                    ><span class="on-date">14/10/2019</span>
+                  </div>
+                  <div>
+                    <span class="stage-name">Shipped</span
+                    ><span class="on-date">15/10/2019</span>
+                  </div>
+                  <div>
+                    <span class="stage-name">Delivered</span
+                    ><span class="on-date">17/10/2019</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <p class="single-p"><strong>16 Items</strong> in this shipment</p>
+          <div class="product">
+            <img src="https://via.placeholder.com/30x60.png" alt="product" />
+            <div class="pdls">
+              <h5>Product Name Can Come Here</h5>
+              <h5>And Here And Here</h5>
+              <p>
+                <span>Qty: 2</span
+                ><span
+                  ><strike>$123</strike><span class="special">$123</span></span
+                >
+              </p>
+            </div>
+          </div>
+
+          <div class="rate">
+            <h5>Rate this product</h5>
+            <div class="rating clearfix">
+              <input id="rating5" type="radio" name="rating" value="5" />
+              <label for="rating5">5</label>
+              <input id="rating4" type="radio" name="rating" value="4" />
+              <label for="rating4">4</label>
+              <input id="rating3" type="radio" name="rating" value="3" />
+              <label for="rating3">3</label>
+              <input id="rating2" type="radio" name="rating" value="2" />
+              <label for="rating2">2</label>
+              <input id="rating1" type="radio" name="rating" value="1" />
+              <label for="rating1">1</label>
+            </div>
+          </div>
+        </section>
+        <section></section>
+      </div>
+    </div>
+  </body>
+</html>
