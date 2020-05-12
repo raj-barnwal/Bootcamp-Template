@@ -1,0 +1,14 @@
+{
+  "name": "order_details",
+  "version": "1.0.0",
+  "description": "Order Details Page Mobile Version",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w scss/ -o dist/css --recursive"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^4.14.1"
+  }
+}
