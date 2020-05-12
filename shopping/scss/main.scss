@@ -1,0 +1,256 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  margin: 0;
+  padding: 0 1rem;
+  max-width: 1440px;
+}
+body {
+  background-color: rgb(236, 233, 233);
+  color: rgb(66, 65, 65);
+}
+
+.py-1 {
+  padding: 1rem;
+}
+.bold {
+  font-weight: 800;
+}
+.bottom {
+  position: relative;
+  margin: 10px 0;
+
+  &:after {
+    content: "";
+    position: absolute;
+    background-color: rgb(207, 204, 204);
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+  }
+}
+.bottom-short {
+  position: relative;
+  margin: 10px;
+
+  &:after {
+    content: "";
+    position: absolute;
+    background-color: rgb(207, 204, 204);
+    width: 98%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+  }
+}
+.date {
+  font-weight: 600;
+}
+.order-details {
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1rem;
+  span {
+    display: inline-block;
+  }
+}
+.ship {
+  display: inline-block;
+  padding: 0.5rem;
+}
+.order-no {
+  font-size: 0.9rem;
+}
+.cod {
+  text-align: right;
+}
+
+.address {
+  background-color: white;
+  padding: 1rem;
+  p {
+    width: 70%;
+  }
+}
+.wrapper-shipment-details {
+  background-color: white;
+  margin-top: 1rem;
+
+  .number-of-shipment,
+  .delievery {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .delievery {
+    h3 {
+      color: green;
+    }
+  }
+}
+/////////////////////////////////////
+
+.order-status {
+  display: flex;
+  flex-direction: column;
+
+  .progress-bar-wrapper {
+    background-color: white;
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    padding: 0 1rem;
+  }
+  .progress-bar {
+    display: flex;
+    justify-content: center;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px 0;
+    z-index: 2;
+
+    .bar {
+      position: relative;
+      width: 10px;
+      //   height: 50%;
+      background-color: green;
+      border-radius: 10px;
+      transition: height 1s;
+    }
+
+    .bar-background {
+      width: 10px;
+      height: 100%;
+      background-color: lightgray;
+      border-radius: 10px;
+    }
+  }
+  .status {
+    width: 85vw;
+    padding: 5px;
+    font-weight: 300;
+
+    span {
+      display: inline-block;
+      padding: 7px;
+    }
+  }
+  .status div:nth-child(-n + 4) :first-child {
+    position: relative;
+    letter-spacing: 1.2px;
+  }
+  .status .stage-name:before {
+    content: "";
+    position: absolute;
+    left: -8px;
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid lightgray;
+  }
+
+  .status .on-date {
+    float: right;
+    visibility: hidden;
+  }
+}
+
+.confirmed .progress-bar .bar {
+  height: 25%;
+}
+.ready .progress-bar .bar {
+  height: 50%;
+}
+.shipped .progress-bar .bar {
+  height: 75%;
+}
+.delivered .progress-bar .bar {
+  height: 100%;
+}
+
+.confirmed .status div:nth-child(-n + 1) :first-child,
+.ready .status div:nth-child(-n + 2) :first-child,
+.shipped .status div:nth-child(-n + 3) :first-child,
+.delivered .status div:nth-child(-n + 4) :first-child {
+  font-weight: 500;
+}
+
+.confirmed .status div:nth-child(-n + 1) :last-child,
+.ready .status div:nth-child(-n + 2) :last-child,
+.shipped .status div:nth-child(-n + 3) :last-child,
+.delivered .status div:nth-child(-n + 4) :last-child {
+  visibility: visible;
+}
+
+.confirmed .status div:nth-child(-n + 1) :first-child:before,
+.ready .status div:nth-child(-n + 2) :first-child:before,
+.shipped .status div:nth-child(-n + 3) :first-child:before,
+.delivered .status div:nth-child(-n + 4) :first-child:before {
+  border-left: 10px solid #16817a;
+}
+
+////////////////////////////////////
+.pro-info {
+  .product {
+    display: flex;
+    padding: 1rem 0;
+  }
+  .product-details {
+    .pro-name {
+      display: block;
+      font-size: 1.3rem;
+      font-weight: 600;
+      //   padding: 0.5rem;
+    }
+    .qty {
+      display: flex;
+      //   justify-content: space-between;
+      margin-top: 20px;
+      padding-right: 6px;
+      .quantity {
+        margin-right: 7rem;
+      }
+    }
+  }
+  img {
+    height: 90px;
+    width: 80px;
+  }
+  span {
+    display: inline-block;
+  }
+}
+
+.rating-block {
+  display: flex;
+  margin-left: 40px;
+  padding: 5px;
+  .rate {
+    padding: 5px 0;
+  }
+  .rating {
+    .fas {
+      font-size: 25px;
+      color: lightgray;
+    }
+  }
+  #one-star:checked ~ .stars label:nth-child(-n + 1) :nth-child(1),
+  #two-star:checked ~ .stars label:nth-child(-n + 2) :nth-child(1),
+  #three-star:checked ~ .stars label:nth-child(-n + 3) :nth-child(1),
+  #four-star:checked ~ .stars label:nth-child(-n + 4) :nth-child(1),
+  #five-star:checked ~ .stars label:nth-child(-n + 5) :nth-child(1),
+  #one-star:hover ~ .stars label:nth-child(-n + 1) :nth-child(1),
+  #two-star:hover ~ .stars label:nth-child(-n + 2) :nth-child(1),
+  #three-star:hover ~ .stars label:nth-child(-n + 3) :nth-child(1),
+  #four-star:hover ~ .stars label:nth-child(-n + 4) :nth-child(1),
+  #five-star:hover ~ .stars label:nth-child(-n + 5) :nth-child(1) {
+    color: darkgreen;
+  }
+}

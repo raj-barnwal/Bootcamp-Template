@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="wrapper">
+        <div class="box">
+          <div class="profile-image">
+            <div class="profile">
+              <span class="profile-edit"><a href="#">EDIT</a></span>
+            </div>
+          </div>
+          <div class="form">
+            <div class="label">
+              <input class="input" type="text" placeholder=" " />
+              <span class="highlight"></span>
+              <label class="label-detail">Full Name</label>
+            </div>
+
+            <div class="label">
+              <input class="input" type="number" placeholder=" " />
+              <span class="highlight"></span>
+              <label class="label-detail">Phone Number</label>
+            </div>
+            <div class="label">
+              <input class="input" type="email" placeholder=" " />
+              <span class="highlight"></span>
+              <label class="label-detail">Email</label>
+            </div>
+            <div class="label">
+              <input class="input" type="text" placeholder=" " />
+              <span class="highlight"></span>
+              <label class="label-detail">Date of Birth</label>
+            </div>
+
+            <div class="change">
+              <div class="label">
+                <input
+                  class="input border-none"
+                  type="password"
+                  placeholder=" "
+                />
+                <span class="highlight"></span>
+                <label class="label-detail">Password</label>
+              </div>
+              <a href="#">CHANGE</a>
+            </div>
+            <div class="gender-wrapper">
+              <span class="gender">Gender:</span>
+              <div class="male py-1">
+                <input
+                  type="radio"
+                  id="radio1"
+                  name="radios"
+                  value="all"
+                  checked
+                />
+                <label for="radio1"><i class="fas fa-mars"></i> Male</label>
+              </div>
+              <div class="female py-1">
+                <input type="radio" id="radio2" name="radios" value="false" />
+                <label for="radio2"><i class="fas fa-venus"></i> Female</label>
+              </div>
+            </div>
+
+            <button class="btn">Update Details</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

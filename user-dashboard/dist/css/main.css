@@ -1,0 +1,160 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+.container {
+  margin: auto;
+  padding: 0;
+  max-width: 1440px; }
+
+.py-1 {
+  padding: 0.5rem; }
+
+.wrapper {
+  position: relative;
+  height: 100%;
+  padding: 2rem 0; }
+  .wrapper:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: url("../img/bg.jpg") no-repeat center center/cover;
+    height: 100%;
+    opacity: 0.6;
+    z-index: -1; }
+  .wrapper .box {
+    margin: 0 auto;
+    background: white;
+    height: 100%;
+    padding: 2rem;
+    width: 30%; }
+    .wrapper .box img {
+      border-radius: 50%;
+      height: 140px;
+      width: 140px;
+      margin-left: 6rem; }
+    .wrapper .box .profile-image {
+      margin: 10px auto;
+      background-image: url("../img/user2.jpg");
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      border: 5px solid white;
+      box-shadow: 1px 1px 5px #e6e6e6;
+      position: relative; }
+      .wrapper .box .profile-image:hover .profile {
+        opacity: 0.5; }
+      .wrapper .box .profile-image .profile {
+        background: white;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        padding: 10px;
+        width: 100%;
+        height: 30%;
+        opacity: 0;
+        transition: opacity 0.25s ease;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center; }
+        .wrapper .box .profile-image .profile-edit {
+          font-weight: bold;
+          font-size: 0.9rem; }
+          .wrapper .box .profile-image .profile-edit a {
+            color: red;
+            text-decoration: none; }
+    .wrapper .box .btn {
+      padding: 0.7rem 2.5rem;
+      color: white;
+      background: #f75973;
+      border-radius: 2px;
+      float: right; }
+
+.form {
+  padding: 2rem 0; }
+  .form .change {
+    display: flex; }
+    .form .change .border-none {
+      border-bottom: none;
+      width: 17rem; }
+    .form .change a {
+      text-decoration: none;
+      color: #f75973;
+      padding-top: 8px; }
+  .form .label {
+    position: relative;
+    margin-bottom: 20px; }
+  .form .input {
+    font-size: 14px;
+    padding: 4px 4px;
+    display: block;
+    width: 100%;
+    height: 30px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #757575; }
+    .form .input:focus {
+      outline: none;
+      border-bottom: 2px solid #f75973; }
+  .form .label-detail {
+    color: #999;
+    font-size: 14px;
+    font-weight: normal;
+    position: absolute;
+    pointer-events: none;
+    left: 5px;
+    top: 5px;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all; }
+  .form .input:focus ~ label,
+  .form .input:not(:placeholder-shown) ~ label {
+    top: -18px;
+    font-size: 14px;
+    color: #f75973; }
+  .form .highlight {
+    position: absolute;
+    height: 50%;
+    width: 100%;
+    top: 15%;
+    left: 0;
+    pointer-events: none;
+    opacity: 0.5; }
+  .form .floating-input:focus ~ .highlight,
+  .form .floating-select:focus ~ .highlight {
+    animation: inputHighlighter 0.3s ease; }
+
+@keyframes inputHighlighter {
+  from {
+    background: #5264ae; }
+  to {
+    width: 0;
+    background: transparent; } }
+  .form .gender-wrapper {
+    display: flex; }
+    .form .gender-wrapper .gender {
+      margin-left: 20px;
+      padding: 1rem; }
+  .form input[type="radio"] {
+    display: none; }
+    .form input[type="radio"] + label {
+      display: inline-block;
+      border-top-left-radius: 20px;
+      border-bottom-left-radius: 20px;
+      border-top-right-radius: 20px;
+      border-bottom-right-radius: 20px;
+      padding: 8px 20px;
+      font-size: 14px;
+      line-height: 20px;
+      color: black;
+      border: 1px solid gray;
+      text-align: center;
+      cursor: pointer;
+      background-color: white; }
+    .form input[type="radio"]:checked + label {
+      outline: 0;
+      background-color: gray;
+      color: white; }

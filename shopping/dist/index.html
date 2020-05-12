@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/main.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <section class="order">
+      <div class="container">
+        <div class="order-details py-1">
+          <span class="order-no"> <strong>ORDER #123456789</strong></span>
+          <span>Total <strong>$1279</strong></span>
+          <div class="placed-on">
+            <span>Order Placed</span>
+            <span class="date">Mon, 6 Nov</span>
+          </div>
+          <div class="payment">
+            <span>Payment Method</span>
+            <span class="cod">C.O.D.</span>
+          </div>
+        </div>
+        <span class=" ship bold">SHIPPING ADDRESS</span>
+        <div class="address">
+          <span class="bold">Puneet Bhadrecha</span>
+          <p>
+            102, Vasan udyog Bhavan, Senapati Rajpat Marg,Behind Mnyavar
+            showroom, Lower Parel(W), Mumbai-400013 Maharsahtra, IN
+          </p>
+          <span class="bold">+91-1234567890</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="progress">
+      <div class="container">
+        <div class="wrapper-shipment-details">
+          <div class="number-of-shipment py-1">
+            <span class="bold"> Shipment 1 of 1</span>
+            <span class="cash"
+              >Paind in Cash <span class="bold">$1234</span></span
+            >
+          </div>
+          <div class="bottom"></div>
+          <div class="delievery py-1">
+            <h3>DELIEVERED</h3>
+            <span> <strong>Friday</strong><span>11/11/2017</span></span>
+          </div>
+
+          <div class="order-status shipped">
+            <!--confirmed,ready,shipped,delivered-->
+            <div class="progress-bar-wrapper">
+                <div class="progress-bar">
+                    <div class="bar-background">
+                      <div class="bar"></div>
+                    </div>
+                  </div>
+                  <div class="status">
+                    <div>
+                      <span class="stage-name">Order Confirmed</span
+                      ><span class="on-date">12/10/2019</span>
+                    </div>
+                    <div>
+                      <span class="stage-name">Ready To Ship</span
+                      ><span class="on-date">14/10/2019</span>
+                    </div>
+                    <div>
+                      <span class="stage-name">Shipped</span
+                      ><span class="on-date">15/10/2019</span>
+                    </div>
+                    <div>
+                      <span class="stage-name">Delivered</span
+                      ><span class="on-date">17/10/2019</span>
+                    </div>
+                  </div>
+            </div>       
+          </div>
+
+          <div class="bottom"></div>
+
+          <div class="shipped">
+            <div class="total-items py-1">
+              <span class="bold">16 Items</span>
+              <span>in this shipment</span>
+            </div>
+            <div class="bottom"></div>
+            <div class="pro-info">
+
+                <div class="product">
+                    <img src="./img/lip.jpeg" alt="" />
+                    <div class="product-details">
+                      <span class="pro-name">Lorem ipsum dolor sit amet.</span>
+
+                      <div class="qty">
+                        <span class="quantity">Qty:2</span>
+                        <span class="price"> <strike>$123</strike> <strong>$123</strong></span>
+                      </div>
+                      
+                    </div>
+                </div>
+              
+              
+              <div class="bottom-short"></div>
+
+              <div class="rating-block">
+                <div class="title">
+                    <span class="rate">Rate this product:</span>
+                </div>
+
+                <div class="rating-star">
+                    <div class="rating">
+                    
+                        <input type="radio" id="no-rating" name="rating" value=0 hidden/>
+                          <input type="radio" id="one-star" name="rating" value=1 hidden/>
+                         <input type="radio" id="two-star" name="rating" value=2 hidden/>
+                          <input type="radio" id="three-star" name="rating" value=3 hidden/>
+                          <input type="radio" id="four-star" name="rating" value=4 hidden/>
+                          <input type="radio" id="five-star" name="rating" value=5 hidden/>
+                      <div class="stars">
+                            <label for="one-star"><i class="fas fa-star"></i></label>
+                          <label for="two-star"><i class="fas fa-star"></i></label>
+                          <label for="three-star"><i class="fas fa-star"></i></label>
+                          <label for="four-star" onclick="check();"><i class="fas fa-star"></i></label>
+                          <label for="five-star"><i class="fas fa-star"></i></label>
+                      </div>
+                </div>
+              </div>
+              <div class="bottom"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
