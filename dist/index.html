@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/baffaac617.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/main.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <section id="form">
+        <div class="container">
+            <div class="matter">
+                <div class="user-image">
+                    <img class="lead" src="./img/user.png">
+                </div>
+                <form action="">
+                    <div class="form-controls">
+                        <input type="text" name="name" id="name" placeholder="name">
+                        <label for="name">Full Name</label>
+                    </div>
+                    <div class="form-controls">
+                        <input type="number" name="number" id="number" placeholder="number">
+                        <label for="number">Phone Number</label>
+                    </div>
+                    <div class="form-controls">
+                        <input type="email" name="email" id="email" placeholder="email">
+                        <label for="email">E-mail Address</label>
+                    </div>
+                    <div class="form-controls">
+                        <input type="text" name="birth" id="name" placeholder="MM/DD/YY" placeholder="MM/DD/YYYY" onfocus="(this.type='date')">
+                        <label for="birth">Date of Birth</label>
+                    </div>
+                    <div class="form-controls">
+                        <input type="password" name="password" id="password" placeholder="password">
+                        <label for="password">Password</label>
+                    </div>
+                    <div class="gender">
+                        <p>Gender: </p>
+                        <input type="radio" name="gender" id="male" checked>
+                        <div class="male">
+                            <p><i class="fas fa-mars"></i> Male</p>
+                        </div>
+                        <input type="radio" name="gender" id="female">
+                        <div class="female">
+                            <p><i class="fas fa-venus"></i> Female</p>
+                        </div>
+                    </div>
+                </form>
+                <a class="update">Update details</a>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
