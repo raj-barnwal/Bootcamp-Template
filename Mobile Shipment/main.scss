@@ -1,0 +1,141 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #f3f3f3;
+  font-family: "Open Sans Condensed", sans-serif;
+}
+@media (max-width: 500px) {
+  .container {
+    max-width: 400px;
+    margin: 0 auto;
+    border: solid 1px #ccc;
+  }
+  .grid-property {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    justify-content: space-between;
+    align-items: center;
+  }
+  .padding-y {
+    padding: 1rem 0;
+  }
+  .border-bottom {
+    border-bottom: solid 1px #ccc;
+  }
+  .order-details {
+    padding: 0 1rem;
+  }
+
+  .box {
+    background-color: #fff;
+    margin: 0.5rem;
+    &:hover {
+      box-shadow: 2px 2px 7px #ccc;
+    }
+  }
+
+  .delivered {
+    .green {
+      color: #5cdb8f;
+    }
+  }
+
+  .delivery-status {
+    .StepProgress {
+      position: relative;
+      &-item {
+        position: relative;
+        list-style: none;
+        display: flex;
+        flex-direction: column-reverse;
+        padding: 0.5rem 0;
+        &-content {
+          display: flex;
+          justify-content: space-between;
+        }
+
+        &::before {
+          display: inline-block;
+          content: "";
+          position: absolute;
+          height: 100%;
+          border-left: 6px solid #ccc;
+        }
+        &:first-child::before {
+          top: 0;
+        }
+
+        &::after {
+          content: "";
+          display: inline-block;
+          position: absolute;
+          left: 3px;
+          width: 6px;
+          height: 6px;
+          border: 1px solid #ccc;
+          border-radius: 50%;
+          background-color: #ccc;
+        }
+
+        &.is-done {
+          &:before {
+            border-left: 6px solid #5cdb8f;
+          }
+
+          &::after {
+            content: "";
+            text-align: center;
+            border: 1px solid #5cdb8f;
+            background-color: #5cdb8f;
+          }
+        }
+
+        p {
+          padding: 0 0 0 1.5rem;
+        }
+      }
+    }
+  }
+  .item-1 {
+    img {
+      height: 80px;
+      width: 80px;
+    }
+  }
+  .star-rating {
+    justify-content: center;
+    grid-gap: 1rem;
+    h5 {
+      color: rgb(156, 154, 154);
+    }
+    fieldset,
+    .rating {
+      border: none;
+      float: left;
+    }
+
+    .rating > input {
+      display: none;
+    }
+    .rating > label:before {
+      font-size: 1.25em;
+      font-family: FontAwesome;
+      display: inline-block;
+      content: "\f005";
+    }
+
+    .rating > label {
+      color: #ddd;
+      float: right;
+    }
+
+    .rating > input:checked ~ label,
+    .rating:not(:checked) > label:hover,
+    .rating:not(:checked) > label:hover ~ label {
+      color: #e74f76;
+    }
+  }
+}

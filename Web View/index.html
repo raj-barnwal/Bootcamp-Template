@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <title>Web View</title>
+  </head>
+  <body>
+    <div class="box">
+      <div class="container">
+        <div class="image">
+          <img src="person4.jpeg" />
+          <div class="textbox"><a href="#">EDIT</a></div>
+        </div>
+
+        <form>
+          <div>
+            <input type="text" class="input-text" required /><label
+              >Full Name</label
+            >
+          </div>
+          <div>
+            <input type="text" class="input-text" required /><label
+              >Phone Number</label
+            >
+          </div>
+          <div>
+            <input type="text" class="input-text" required /><label
+              >Email Address</label
+            >
+          </div>
+          <div>
+            <input type="text" class="input-text" required /><label
+              >Date Of Birth</label
+            >
+          </div>
+          <div class="pswd">
+            <div>
+              <input type="password" class="input-text" required /><label
+                >Password</label
+              >
+            </div>
+            <a href="#">CHANGE</a>
+          </div>
+          <div class="gender">
+            <p>Gender:</p>
+            <div>
+              <input
+                type="radio"
+                name="gender"
+                value="male"
+                id="male"
+                checked
+              /><label for="male"><i class="fa fa-mars"></i> Male</label>
+            </div>
+            <div>
+              <input
+                type="radio"
+                name="gender"
+                value="female"
+                id="female"
+              /><label for="female"><i class="fa fa-venus"></i> Female</label>
+            </div>
+          </div>
+          <div><button type="submit" class="btn">UPDATE DETAILS</button></div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

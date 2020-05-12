@@ -1,0 +1,205 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background: url("/banner.jpeg") no-repeat center center/cover;
+  background-color: rgba(65, 63, 63, 0.9);
+  position: relative;
+  font-family: "Lato", sans-serif;
+}
+
+.box {
+  background: #fff;
+  margin: 0 auto;
+  max-width: 600px;
+  position: absolute;
+  top: 20px;
+  right: 100px;
+  left: 100px;
+}
+
+.container {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.image {
+  margin: 0 auto;
+  width: 150px;
+  position: relative;
+  padding: 1rem 0;
+}
+
+.image:hover .textbox {
+  z-index: 1;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.image img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+.image .textbox {
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  border-bottom-left-radius: 75px;
+  border-bottom-right-radius: 75px;
+  height: 75px;
+  width: 150px;
+  z-index: -1;
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.image .textbox a {
+  position: absolute;
+  text-decoration: none;
+  color: #e74f76;
+  font-weight: bolder;
+  cursor: pointer;
+  top: 15px;
+  right: 10px;
+  left: 10px;
+}
+
+form {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+  grid-gap: 1rem;
+}
+
+form div {
+  position: relative;
+}
+
+form div label {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  color: #999;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  pointer-events: none;
+}
+
+form .input-text {
+  width: 100%;
+  outline: none;
+  padding: 0.5rem 0;
+  border: none;
+  border-bottom: 2px solid #ccc;
+}
+
+form .input-text:hover {
+  border-bottom: solid 2px #e74f76;
+}
+
+form .input-text:focus ~ label,
+form .input-text:valid ~ label {
+  top: -12px;
+  left: 0;
+  color: #e74f76;
+  font-size: 12px;
+}
+
+form > div:nth-child(5) {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (auto)[2];
+      grid-template-columns: repeat(2, auto);
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+form > div:nth-child(5) .input-text {
+  width: 50%;
+  border: none;
+}
+
+form > div:nth-child(5) a {
+  text-decoration: none;
+  color: #e74f76;
+  font-weight: bolder;
+}
+
+.gender {
+  padding-top: 1rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (auto)[3];
+      grid-template-columns: repeat(3, auto);
+  grid-gap: 1rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.gender input[type="radio"] {
+  opacity: 0;
+  width: 100px;
+}
+
+.gender input[type="radio"]:checked + label {
+  background: #3f414d;
+  color: #fff;
+  border: solid 2px transparent;
+}
+
+.gender label {
+  position: absolute;
+  display: inline-block;
+  width: 100px;
+  top: -7px;
+  padding: 7px;
+  border: solid 2px #ccc;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  border-radius: 40px;
+  color: #abacb1;
+  text-align: center;
+}
+
+.btn {
+  float: right;
+  -webkit-transition: all 0.7s ease-in-out;
+  transition: all 0.7s ease-in-out;
+  padding: 1rem 0.5rem;
+  color: #fff;
+  background: #e74f76;
+  cursor: pointer;
+  border: none;
+  width: 40%;
+  margin: 1rem 0;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (auto)[1];
+      grid-template-columns: repeat(1, auto);
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+}
+
+.btn:hover {
+  -webkit-box-shadow: 2px 2px 5px 3px #dd6b88;
+          box-shadow: 2px 2px 5px 3px #dd6b88;
+}
+/*# sourceMappingURL=main.css.map */

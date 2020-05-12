@@ -1,0 +1,144 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: #f3f3f3;
+  font-family: "Open Sans Condensed", sans-serif;
+}
+
+@media (max-width: 500px) {
+  .container {
+    max-width: 400px;
+    margin: 0 auto;
+    border: solid 1px #ccc;
+  }
+  .grid-property {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (auto)[2];
+        grid-template-columns: repeat(2, auto);
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .padding-y {
+    padding: 1rem 0;
+  }
+  .border-bottom {
+    border-bottom: solid 1px #ccc;
+  }
+  .order-details {
+    padding: 0 1rem;
+  }
+  .box {
+    background-color: #fff;
+    margin: 0.5rem;
+  }
+  .box:hover {
+    -webkit-box-shadow: 2px 2px 7px #ccc;
+            box-shadow: 2px 2px 7px #ccc;
+  }
+  .delivered .green {
+    color: #5cdb8f;
+  }
+  .delivery-status .StepProgress {
+    position: relative;
+  }
+  .delivery-status .StepProgress-item {
+    position: relative;
+    list-style: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    padding: 0.5rem 0;
+  }
+  .delivery-status .StepProgress-item-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .delivery-status .StepProgress-item::before {
+    display: inline-block;
+    content: "";
+    position: absolute;
+    height: 100%;
+    border-left: 6px solid #ccc;
+  }
+  .delivery-status .StepProgress-item:first-child::before {
+    top: 0;
+  }
+  .delivery-status .StepProgress-item::after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    left: 3px;
+    width: 6px;
+    height: 6px;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    background-color: #ccc;
+  }
+  .delivery-status .StepProgress-item.is-done:before {
+    border-left: 6px solid #5cdb8f;
+  }
+  .delivery-status .StepProgress-item.is-done::after {
+    content: "";
+    text-align: center;
+    border: 1px solid #5cdb8f;
+    background-color: #5cdb8f;
+  }
+  .delivery-status .StepProgress-item p {
+    padding: 0 0 0 1.5rem;
+  }
+  .item-1 img {
+    height: 80px;
+    width: 80px;
+  }
+  .star-rating {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    grid-gap: 1rem;
+  }
+  .star-rating h5 {
+    color: #9c9a9a;
+  }
+  .star-rating fieldset,
+  .star-rating .rating {
+    border: none;
+    float: left;
+  }
+  .star-rating .rating > input {
+    display: none;
+  }
+  .star-rating .rating > label:before {
+    font-size: 1.25em;
+    font-family: FontAwesome;
+    display: inline-block;
+    content: "\f005";
+  }
+  .star-rating .rating > label {
+    color: #ddd;
+    float: right;
+  }
+  .star-rating .rating > input:checked ~ label,
+  .star-rating .rating:not(:checked) > label:hover,
+  .star-rating .rating:not(:checked) > label:hover ~ label {
+    color: #e74f76;
+  }
+}
+/*# sourceMappingURL=main.css.map */
