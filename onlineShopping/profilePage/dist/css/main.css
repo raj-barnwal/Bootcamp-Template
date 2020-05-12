@@ -1,0 +1,156 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+* {
+  font-family: "Jost", sans-serif; }
+
+.row-style {
+  display: flex;
+  justify-content: space-between; }
+
+.bg {
+  width: 100%;
+  height: 100vh;
+  background-color: #000; }
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0; }
+
+.container {
+  min-width: 500px;
+  width: 40%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 0.3rem 0 2rem 0; }
+  .container .profile-pic {
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    border-radius: 50%;
+    display: flex;
+    position: relative;
+    left: 50%;
+    top: 15px;
+    transform: translateX(-50%);
+    border: 7px solid #fff;
+    box-shadow: 2px 2px 10px 1px rgba(0, 0, 0, 0.1); }
+    .container .profile-pic img {
+      width: 100%;
+      height: 100%; }
+    .container .profile-pic .edit-btn {
+      position: absolute;
+      background-color: rgba(255, 255, 255, 0.5);
+      width: 100%;
+      height: 100%;
+      top: 70%;
+      left: 0;
+      text-align: center;
+      font-size: 1rem;
+      display: none; }
+      .container .profile-pic .edit-btn a {
+        display: block;
+        margin-top: 0.7rem;
+        color: #e74f76;
+        text-decoration: none; }
+    .container .profile-pic:hover .edit-btn {
+      animation: slideUp 0.4s;
+      display: block; }
+  .container form {
+    margin-top: 3rem;
+    width: 70%;
+    margin: 0 auto; }
+    .container form .input-container {
+      position: relative;
+      margin: 2rem 0; }
+      .container form .input-container input {
+        position: relative;
+        font-size: 1.3rem;
+        padding-left: 7px;
+        width: 100%;
+        background: transparent;
+        border: none;
+        border-bottom: 1px solid #bbbaba; }
+      .container form .input-container input:focus {
+        outline: none; }
+      .container form .input-container label {
+        color: #999;
+        font-size: 1.3rem;
+        font-weight: normal;
+        position: absolute;
+        pointer-events: none;
+        left: 5px;
+        top: -2px;
+        transition: 0.2s ease all; }
+      .container form .input-container ::-webkit-input-placeholder {
+        opacity: 0;
+        color: #cac8c8; }
+      .container form .input-container input:focus::-webkit-input-placeholder {
+        opacity: 1; }
+      .container form .input-container input:focus {
+        border-color: #e74f76; }
+      .container form .input-container input:focus + label,
+      .container form .input-container input:not(:placeholder-shown) + label {
+        top: -20px;
+        font-size: 1rem; }
+    .container form .change-password {
+      color: #e74f76;
+      font-size: 0.9rem;
+      text-decoration: none;
+      font-weight: bold; }
+      .container form .change-password:hover {
+        opacity: 0.7; }
+    .container form .gender-container input[type="radio"] {
+      opacity: 0; }
+    .container form .gender-container label {
+      padding: 0.5rem 1rem;
+      border-radius: 2rem;
+      border: 1px solid #3f404c;
+      transition: all 0.5s; }
+      .container form .gender-container label:hover {
+        cursor: pointer;
+        border-color: #e74f76; }
+      .container form .gender-container label i {
+        margin-right: 10px; }
+    .container form .gender-container input:checked + label {
+      color: #fff;
+      background-color: #3f404c; }
+    .container form .submit-btn {
+      margin-top: 2.3rem;
+      float: right;
+      background-color: #e74f76;
+      padding: 0.8rem 2rem;
+      color: #fff;
+      font-weight: bold;
+      border: none;
+      transition: opacity 0.5s; }
+      .container form .submit-btn:hover {
+        cursor: pointer;
+        opacity: 0.7; }
+
+@keyframes slideUp {
+  from {
+    transform: translateY(100%); }
+  to {
+    transform: translateY(0); } }
+
+@media (max-width: 500px) {
+  .container {
+    width: 100%;
+    min-width: 320px; }
+    .container form .gender-container {
+      display: flex;
+      flex-direction: column; }
+      .container form .gender-container span {
+        margin-top: -1rem;
+        margin-left: 2.5rem; }
+        .container form .gender-container span:last-child {
+          display: block;
+          margin-top: 2rem; } }

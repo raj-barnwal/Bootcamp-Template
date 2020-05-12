@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Jost&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="bg">
+      <div class="container">
+        <div class="profile-pic">
+          <img src="img/profile.jpeg" />
+          <div class="edit-btn">
+            <a href="#">EDIT</a>
+          </div>
+        </div>
+
+        <form>
+          <div class="input-container">
+            <input type="text" placeholder=" " required />
+            <label>Full Name</label>
+          </div>
+
+          <div class="input-container">
+            <input type="number" placeholder=" " required />
+            <label>Phone Number</label>
+          </div>
+
+          <div class="input-container">
+            <input type="email" placeholder=" " required />
+            <label>E-mail Address</label>
+          </div>
+
+          <div class="input-container">
+            <input type="text" placeholder="DD/MM/YYYY" required />
+            <label>Date of Birth</label>
+          </div>
+
+          <div class="input-container row-style">
+            <input type="password" placeholder=" " required />
+            <label>Password</label>
+
+            <a href="#" class="change-password">
+              CHANGE
+            </a>
+          </div>
+
+          <div class="gender-container">
+            <b>Gender:</b>
+
+            <span>
+              <input type="radio" id="male" name="gender" />
+              <label for="male">
+                <i class="fa fa-mars"></i>
+                Male
+              </label>
+            </span>
+
+            <span>
+              <input type="radio" id="female" name="gender" />
+              <label for="female">
+                <i class="fa fa-venus"></i>
+                Female
+              </label>
+            </span>
+          </div>
+
+          <input type="submit" class="submit-btn" value="UPDATE DETAILS" />
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
