@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/8643481079.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./css/main.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="user-pic"><img src="./user.jpg" alt="photo" /></div>
+      <!-- <div class="imagee">
+        <img src="./user.jpg" alt="photo" class="imgg" />
+        <div class="icon"><i class="fas fa-pencil-alt"></i></div>
+      </div> -->
+      <form>
+        <div class="details">
+          <input type="name" name="name" placeholder="name" required />
+          <label>Full Name</label>
+        </div>
+        <div class="details">
+          <input type="phone" name="phone" placeholder="phone" />
+          <label>Phone Number</label>
+        </div>
+        <div class="details">
+          <input type="email" name="email" placeholder="email" required />
+          <label>E-mail Address</label>
+        </div>
+        <div class="details">
+          <input
+            type="text"
+            name="dob"
+            id="name"
+            placeholder="MM/DD/YY"
+            placeholder="MM/DD/YYYY"
+            onfocus="(this.type='date')"
+          />
+          <label>Date of Birth</label>
+        </div>
+        <div class="details">
+          <input
+            type="password"
+            name="password"
+            placeholder="password"
+            required
+          />
+          <label>Password</label>
+          <button class="change-btn">CHANGE</button>
+        </div>
+        <!-- <div class="gender">
+          <label>Gender: </label>
+          <button class="btn"><i class="fas fa-mars"></i>Male</button>
+          <button class="btn"><i class="fas fa-venus"></i>Female</button>
+        </div> -->
+        <div class="gender">
+          <p>Gender:</p>
+          <input type="radio" name="gender" id="male" checked />
+          <div class="male">
+            <p><i class="fas fa-mars"></i> Male</p>
+          </div>
+          <input type="radio" name="gender" id="female" />
+          <div class="female">
+            <p><i class="fas fa-venus"></i> Female</p>
+          </div>
+        </div>
+
+        <div class="main-button"><a href="#">UPDATE DETAILS</a></div>
+      </form>
+    </div>
+  </body>
+</html>
