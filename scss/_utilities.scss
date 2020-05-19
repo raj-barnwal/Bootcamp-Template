@@ -1,0 +1,79 @@
+:root{
+    --main-color:#674194;
+    --white-color:#fff;
+    --dark-color:#333;
+    --light-color:#f5f5f5;
+    --lighter-color:#e9e6e6;
+    --medium-color:#a5a5a5;
+    --max-width:1180px;
+    --secondary-color:#7f5caa;
+}
+%font-icon{
+    font-family: "Font Awesome 5 Free";
+    display: inline-block;
+}
+// %header-icons{
+//     color: var(--dark-color);
+//     position: absolute;
+//     left:-43%;
+//     top: 0;
+//     border-radius: 50%;
+//     width: 20px;
+//     height: 20px;
+//     line-height: 20px;
+//     text-align: center;
+//     border: 1px solid var(--main-color);
+//     padding: .3rem;
+// }
+
+%flex-property{
+    display: flex;
+    justify-content: space-between;
+}
+%transition-shared{
+    transition: all 1s ease-in-out;
+}
+@mixin transform($property) {
+    transform: $property;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5rem;
+}
+
+.container{
+    // background-color: red;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 15px;
+}
+ul{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+}
+.btn{
+    margin: 1rem 0;
+    padding: .5rem 2rem;
+}
+.nav-right{
+    text-align: right;
+}
+.main-color{
+    color: var(--main-color);
+}
+.text-upper{
+    text-transform: uppercase;
+}
+
+
+
