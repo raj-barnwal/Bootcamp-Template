@@ -1,0 +1,195 @@
+:root {
+  --main-color:#fc0069;
+  --dark-color:#403e4d;
+  --light-color:#c7c6cb;
+  --lighter-color:#f3f3f3;
+  --medium-color:#7c7b85;
+  --max-width:1180px; }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5rem;
+  color: var(--medium-color); }
+
+h2, h3, h4 {
+  padding: .5rem 0; }
+
+p {
+  font-size: 1.2rem;
+  line-height: 1.6rem; }
+
+ul {
+  list-style-type: none; }
+
+a {
+  text-decoration: none; }
+
+/*utility*/
+.container {
+  max-width: 50%;
+  padding: 15px;
+  margin: 2% auto;
+  background-color: #fff;
+  text-align: center; }
+
+.text-upper {
+  text-transform: uppercase; }
+
+.align-right {
+  text-align: right; }
+
+/*padding*/
+.py-1 {
+  padding: .5rem 0; }
+
+.py-2 {
+  padding: 1rem 0; }
+
+.py-3 {
+  padding: 1.5rem 0; }
+
+.p-1 {
+  padding: .5rem; }
+
+.p-2 {
+  padding: 1rem; }
+
+.p-3 {
+  padding: 1.5rem; }
+
+/*margin*/
+.my-1 {
+  margin: .5rem 0; }
+
+.my-2 {
+  margin: 1rem 0; }
+
+.my-3 {
+  margin: 1.5rem 0; }
+
+.m-1 {
+  margin: .5rem; }
+
+.m-2 {
+  margin: 1rem; }
+
+.m-3 {
+  margin: 1.5rem; }
+
+body {
+  background: url("../bannner.jpg") no-repeat center center/cover; }
+
+.modal-content {
+  padding: 2rem; }
+  .modal-content .image-logo {
+    position: relative; }
+    .modal-content .image-logo a img {
+      width: 170px;
+      height: 170px;
+      border-radius: 50%;
+      box-shadow: 2px 3px 8px 5px var(--lighter-color); }
+    .modal-content .image-logo a:hover h3 {
+      opacity: 1; }
+    .modal-content .image-logo a h3 {
+      color: var(--main-color);
+      position: absolute;
+      bottom: .5rem;
+      padding: 1rem 0;
+      left: 50%;
+      transform: translateX(-50%);
+      opacity: 0;
+      transition: .5s ease;
+      width: 170px;
+      display: block;
+      background-color: rgba(255, 255, 255, 0.5); }
+  .modal-content .form-content {
+    text-align: left;
+    width: 100%;
+    padding: 2rem; }
+    .modal-content .form-content .inner-form-box {
+      position: relative; }
+      .modal-content .form-content .inner-form-box label, .modal-content .form-content .inner-form-box input {
+        width: 100%; }
+      .modal-content .form-content .inner-form-box label {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        transition: 1s all ease-in-out;
+        padding: 7px 0; }
+      .modal-content .form-content .inner-form-box input {
+        border: none;
+        padding: .8rem 0 0 .8rem;
+        padding-left: 0;
+        margin-bottom: 1rem;
+        background-color: transparent;
+        border-bottom: 1px solid var(--light-color);
+        transition: 1s all ease-in-out;
+        position: relative;
+        z-index: 1; }
+        .modal-content .form-content .inner-form-box input:focus {
+          outline: none;
+          border-bottom: 1px solid var(--main-color); }
+        .modal-content .form-content .inner-form-box input:focus + label, .modal-content .form-content .inner-form-box input:valid + label {
+          top: 100%;
+          transform: translateY(-3rem);
+          margin-top: -15px; }
+        .modal-content .form-content .inner-form-box input[type=date]:required:invalid::-webkit-datetime-edit {
+          color: transparent; }
+        .modal-content .form-content .inner-form-box input[type=date]:focus::-webkit-datetime-edit {
+          color: black !important; }
+    .modal-content .form-content .gender-box {
+      margin: 1.5rem 0 0 3rem; }
+      .modal-content .form-content .gender-box .gender-inner-box {
+        list-style-type: none;
+        margin: 0 0 0 20%;
+        padding: 0; }
+        .modal-content .form-content .gender-box .gender-inner-box li {
+          float: left;
+          margin: 0 10px 0 0;
+          width: 100px;
+          height: 40px;
+          position: relative; }
+        .modal-content .form-content .gender-box .gender-inner-box label, .modal-content .form-content .gender-box .gender-inner-box input {
+          display: block;
+          position: absolute;
+          top: -69%;
+          left: 0;
+          right: 0;
+          bottom: 67%;
+          text-align: center;
+          border-radius: 20px;
+          color: var(--dark-color); }
+        .modal-content .form-content .gender-box .gender-inner-box label {
+          padding: 5px;
+          border: 1px solid #CCC;
+          cursor: pointer;
+          z-index: 90; }
+          .modal-content .form-content .gender-box .gender-inner-box label span {
+            display: inline-block;
+            padding-top: 3px; }
+          .modal-content .form-content .gender-box .gender-inner-box label:hover {
+            background: #DDD; }
+        .modal-content .form-content .gender-box .gender-inner-box input[type="radio"] {
+          opacity: 0.01;
+          z-index: 100; }
+        .modal-content .form-content .gender-box .gender-inner-box input[type="radio"]:checked + label,
+        .modal-content .form-content .gender-box .gender-inner-box .Checked + label {
+          background: var(--dark-color);
+          color: #fff; }
+    .modal-content .form-content .btn-box {
+      text-align: right;
+      margin: 1rem 0; }
+      .modal-content .form-content .btn-box .btn-main {
+        border: none;
+        padding: 1rem 2.5rem;
+        background-color: var(--main-color);
+        color: #fff;
+        font-size: 1rem;
+        font-weight: bold; }

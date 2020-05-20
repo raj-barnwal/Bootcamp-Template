@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <title>Desktop View</title>
+</head>
+<body>
+<div class="container-fluid">
+    <!-- The Modal -->
+    <div id="myModal" class="modal container">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="image-logo">
+                <a href="#"><img src="profile.jpg" alt="profile image">
+                    <h3>Edit</h3>
+                </a>
+            </div>
+            <form action="#" class="form-content go-top">
+                <div class="inner-form-box">
+                    <input id="name" name="name" type="text" required>
+                    <label class="label" for="name">Full Name</label>
+                </div>
+                <div class="inner-form-box">
+                    <input id="phone" name="phone" type="tel" required>
+                    <label class="label" for="phone">Phone Phone</label>
+                </div>
+                <div class="inner-form-box">
+                    <input id="email" name="email" type="email" required>
+                    <label class="label" for="email">Email Address</label>
+                </div>
+                 <div class="inner-form-box">
+                    <input id="date" name="date" type="date" required>
+                    <label class="label" for="date">Date of Birth</label>
+                </div>
+                <div class="inner-form-box">
+                    <input id="password" name="password" type="password" required>
+                    <label class="label" for="password">Password</label>
+                </div> 
+                <div class="gender-box">
+                    <label for="gender">Gender:</label>
+                    <ul class="gender-inner-box">
+                        <li>
+                            <input type="radio" id="male" name="gender" value="male" checked="checked">
+                            <label for="male"><span><i class="fa fa-mars"></i> Male</span></label>
+                        </li>
+                        <li>
+                            <input type="radio" id="female" name="gender" value="female" >
+                            <label for="female"><span><i class="fa fa-venus"></i> FeMale</span></label>
+                        </li>
+                    </ul>
+                </div>  
+                <div class="btn-box">
+                    <button class="btn-main">UPDATE DETAILS</button>
+                </div>         
+            </form>
+        </div>
+    </div>  
+</div>
+</body>
+</html>
